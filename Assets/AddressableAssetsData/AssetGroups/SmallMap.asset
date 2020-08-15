@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SmallMap
+  m_EditorClassIdentifier: 
+  m_GroupName: SmallMap
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 557cd0b065be92645b7f5c3f5be8b5d4
+  m_SerializeEntries:
+  - m_GUID: 4c53c0fbd6f5de546b577b1b0789b925
+    m_Address: "\u732B\u57CE\u5E73\u9762\u56FE"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 426648481213aab4ab4affe420c113c1, type: 2}
+    - {fileID: 11400000, guid: 7937bbf8b0215994e8c3262f479a2e7b, type: 2}

@@ -1,0 +1,18 @@
+{
+  "monsters": [
+    {
+      "id": 0,
+      "name": "毛线",
+      "currentHP": 30,
+      "maxHP": 30,
+      "attack": 10,
+      "defence": 5,
+      "moveSpeed": 3,
+      "attackDist": 2.2,
+      "followDist": 20.0,
+      "maxMoveDist": 30.0,
+      "attackDelta": 3.0,
+      "killExp": 10
+    }
+  ]
+}

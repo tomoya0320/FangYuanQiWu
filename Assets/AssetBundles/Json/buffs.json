@@ -1,0 +1,65 @@
+{
+  "buffs": [
+    {
+      "id": 0,
+      "name": "移动加成",
+      "iconFileName": "status_ico_yisujiacheng",
+      "description": "提升30%移动速度，持续20秒。（可叠加）",
+      "duration": 20,
+      "maxStackNum": 5,
+      "effects": [
+        {
+          "classTag": 1,
+          "value": 0.3,
+          "description": "提升移动速度。"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "持续回血",
+      "iconFileName": "status_ico_heakthgained",
+      "description": "每秒恢复5点生命值，持续10秒。",
+      "duration": 10,
+      "maxStackNum": 1,
+      "effects": [
+        {
+          "classTag": 0,
+          "value": 5,
+          "description": "恢复生命值"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "持续扣血",
+      "iconFileName": "status_ico_kouxue",
+      "description": "每秒失去5点生命值，持续10秒。",
+      "duration": 10,
+      "maxStackNum": 1,
+      "isDebuff": true,
+      "effects": [
+        {
+          "classTag": 0,
+          "value": 5,
+          "description": "失去生命值"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "自然恩赐",
+      "iconFileName": "status_ico_heakthgained",
+      "description": "在树桩附近时每秒恢复5点生命值。",
+      "duration": -1,
+      "maxStackNum": 1,
+      "effects": [
+        {
+          "classTag": 0,
+          "value": 5,
+          "description": "恢复生命值"
+        }
+      ]
+    }
+  ]
+}

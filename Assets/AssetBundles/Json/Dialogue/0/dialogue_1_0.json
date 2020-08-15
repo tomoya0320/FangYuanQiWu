@@ -1,0 +1,78 @@
+{
+	"content": [
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "这里是哪里，我好像来过，但我记不起来了..."
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "你这是在迷路？哈哈，这里我很熟，我可以给你指路~不过..."
+		},
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "不过？"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 1,
+			"text": "不过我们素不相识，你得帮我个忙~"
+		},
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "说说看？"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 1,
+			"text": "我需要一些材料做甜酒。可以帮我去采摘10个樱桃吗？"
+		},
+		{
+			"category": "task",
+			"taskType": 1,
+			"taskId": 2,
+			"refuse": [
+				{
+					"category": "dialog",
+					"role": "我",
+					"illustrationIndex": 0,
+					"text": "我先逛逛一会来找你"
+				},
+				{
+					"category": "dialog",
+					"role": "喵栗",
+					"roleId": 0,
+					"illustrationIndex": 0,
+					"text": "哎，好吧，那我就去找别人好了。"
+				}
+			],
+			"accept": [
+				{
+					"category": "dialog",
+					"role": "我",
+					"illustrationIndex": 0,
+					"text": "是那些树上的红色果实吗？应该问题不大。"
+				},
+				{
+					"category": "dialog",
+					"role": "喵栗",
+					"roleId": 0,
+					"illustrationIndex": 0,
+					"text": "别让我等太久哦~"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+  "personalities": [
+    {
+      "id": 0,
+      "rarity": 1,
+      "currentHP": 120,
+      "maxHP": 120,
+      "attack": 15,
+      "defence": 15,
+      "moveSpeed": 6.0,
+      "jumpSpeed": 0.2,
+      "illustration2Index": 0,
+
+      "name": "Player1",
+      "characteristic": "防御型      近程",
+      "handbookIconFileName": "handbook_Player1",
+      "illustrationFileNames": [
+        "illustration_Player1"
+      ],
+      "illustration2FileNames": [
+        "illustration2_Player1"
+      ],
+      "headIconFileName": "head_Player1",
+      "live2dPrefabName": "juesexiaoguo",
+      "playerPrefabName": "player_0",
+      "repeatedProp": {
+        "id": 5,
+        "num": 50
+      },
+      "upstarProps": [
+        {
+          "id": 5,
+          "num": 100
+        },
+        {
+          "id": -2,
+          "num": 500
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rarity": 1,
+      "currentHP": 200,
+      "maxHP": 200,
+      "attack": 10,
+      "defence": 20,
+      "moveSpeed": 6.0,
+      "jumpSpeed": 0.2,
+
+      "name": "Player2",
+      "characteristic": "进攻型      近程",
+      "handbookIconFileName": "handbook_Player2",
+      "illustrationFileNames": [
+        "illustration_Player2"
+      ],
+      "illustration2FileNames": [
+        "illustration_Player2"
+      ],
+      "headIconFileName": "head_Player2",
+      "live2dPrefabName": "juesexiaoguo",
+      "playerPrefabName": "player_0",
+      "repeatedProp": {
+        "id": 5,
+        "num": 50
+      },
+      "upstarProps": [
+        {
+          "id": 1,
+          "num": 100
+        },
+        {
+          "id": -2,
+          "num": 500
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "rarity": 1,
+      "currentHP": 100,
+      "maxHP": 100,
+      "attack": 50,
+      "defence": 5,
+      "moveSpeed": 6.0,
+      "jumpSpeed": 0.2,
+
+      "name": "Player3",
+      "characteristic": "平衡型      近程",
+      "handbookIconFileName": "handbook_Player3",
+      "illustrationFileNames": [
+        "illustration_Player3"
+      ],
+      "illustration2FileNames": [
+        "illustration_Player3"
+      ],
+      "headIconFileName": "head_Player3",
+      "live2dPrefabName": "juesexiaoguo",
+      "playerPrefabName": "player_0",
+      "repeatedProp": {
+        "id": 5,
+        "num": 50
+      },
+      "upstarProps": [
+        {
+          "id": 0,
+          "num": 100
+        },
+        {
+          "id": -2,
+          "num": 500
+        }
+      ]
+    }
+  ]
+}

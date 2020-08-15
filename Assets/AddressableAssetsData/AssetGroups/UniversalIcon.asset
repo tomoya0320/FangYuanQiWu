@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UniversalIcon
+  m_EditorClassIdentifier: 
+  m_GroupName: UniversalIcon
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 44323ac171276dd4dba7336a03b6cc25
+  m_SerializeEntries:
+  - m_GUID: 08168edd6b0cfee4895d92c99a2938c3
+    m_Address: handbook_hud_wupindikuang
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6806f55532ef2fc48942af1fa1760960
+    m_Address: explore_btn_wanfashuoming
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fb70de8958474d544818c23dfd7e9fd4, type: 2}
+    - {fileID: 11400000, guid: b4f99bc8a5bc06249a6d5624147bbca8, type: 2}

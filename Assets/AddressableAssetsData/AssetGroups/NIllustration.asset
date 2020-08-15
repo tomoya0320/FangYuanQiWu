@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: NIllustration
+  m_EditorClassIdentifier: 
+  m_GroupName: NIllustration
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e0e5b2e024a08704aa6ae6d9fd7a0967
+  m_SerializeEntries:
+  - m_GUID: 7f4feafe4ee995b4eb1e6e0e13b183cb
+    m_Address: "NPC_\u55B5\u6817_\u6B63\u5E38\u72B6\u6001"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8d073a06a7fad304396526d30c008934
+    m_Address: "NPC_\u55B5\u6817_\u53D9\u8FF0\u4EFB\u52A1\u72B6\u6001"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 2800000, guid: 8d073a06a7fad304396526d30c008934, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 8d073a06a7fad304396526d30c008934, type: 3}
+  - m_GUID: a267a91e37f3b1b40a51af424dfbd202
+    m_Address: "\u83B1\u838E\u7ACB\u7ED81"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    m_MainAsset: {fileID: 2800000, guid: a267a91e37f3b1b40a51af424dfbd202, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: a267a91e37f3b1b40a51af424dfbd202, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 69cda60a3650cd34db66259788a41101, type: 2}
+    - {fileID: 11400000, guid: 51d5fab3884052f4bbe0b2b2dbfe8778, type: 2}

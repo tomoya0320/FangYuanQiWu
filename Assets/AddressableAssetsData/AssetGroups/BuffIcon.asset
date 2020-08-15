@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: BuffIcon
+  m_EditorClassIdentifier: 
+  m_GroupName: BuffIcon
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 053b7b7f341b85c44aab783816470252
+  m_SerializeEntries:
+  - m_GUID: 12f8fedcc0acda74581a677410a95dd9
+    m_Address: status_ico_heakthgained
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a6d25ef79ef755b4b8d746cdf18927b7
+    m_Address: status_ico_yisujiacheng
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c11befeb29873e4458a3d72717b91790
+    m_Address: status_ico_kouxue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 64461c57b8d114b419ca6286f0af4622, type: 2}
+    - {fileID: 11400000, guid: 1bb460ed9c850c54c866b3a8beac7198, type: 2}

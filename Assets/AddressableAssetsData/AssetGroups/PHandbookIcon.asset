@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PHandbookIcon
+  m_EditorClassIdentifier: 
+  m_GroupName: PHandbookIcon
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 00498dff7afc18743823fda5732a3a2d
+  m_SerializeEntries:
+  - m_GUID: 8a98a30bd348caf4da512d7b034975ea
+    m_Address: handbook_Player3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c4f3df35f4f255b40b81fb42650cdb98
+    m_Address: handbook_Player1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e2628283c77c2934983c45bbe2c8bff1
+    m_Address: handbook_Player2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 373204c38cda5bf45bb66fadfed955fe, type: 2}
+    - {fileID: 11400000, guid: b262db794c4cdc44d89e4d912db8a518, type: 2}

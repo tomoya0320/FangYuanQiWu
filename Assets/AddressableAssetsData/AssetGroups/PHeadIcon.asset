@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PHeadIcon
+  m_EditorClassIdentifier: 
+  m_GroupName: PHeadIcon
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5e8a0f6dba00e284b878e18e650a0872
+  m_SerializeEntries:
+  - m_GUID: 78652b2fde342eb488dae7b231a80f3d
+    m_Address: head_Player2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d5fcc5454ea4c5d43a730682c96afbdc
+    m_Address: head_Player1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: dfac8b77168fbed44b5a8668a9e0a252
+    m_Address: head_Player3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9b5886c5b6234874e8cc6034f41ce3ff, type: 2}
+    - {fileID: 11400000, guid: ed63e596ff27bb844a5e8462889f4ea9, type: 2}

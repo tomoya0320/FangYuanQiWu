@@ -1,0 +1,3 @@
+1.把Dialog预设放在start场景。
+2.给玩家添加TriggerDialog脚本。
+3.给需要对话的NPC添加DialogNPC脚本，参数里填写包含对话内容的json文件（具体参考demo场景用法）。

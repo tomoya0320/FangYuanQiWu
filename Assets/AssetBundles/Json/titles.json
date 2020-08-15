@@ -1,0 +1,39 @@
+{
+  "titles": [
+    {
+      "id": 0,
+      "rarity": 0,
+      "name": "人格铸造师",
+      "iconFileName": "人格铸造师",
+      "description": "-人格铸造师-\n\n人格图鉴收藏达到三个及以上获得"
+    },
+    {
+      "id": 1,
+      "rarity": 1,
+      "name": "腰缠万贯",
+      "iconFileName": "腰缠万贯",
+      "description": "-腰缠万贯-\n\n灵感达到一百万获得"
+    },
+    {
+      "id": 2,
+      "rarity": 1,
+      "name": "酒罐子",
+      "iconFileName": "酒罐子",
+      "description": "-酒罐子-\n\n累计饮用50杯樱桃甜酒获得"
+    },
+    {
+      "id": 3,
+      "rarity": 2,
+      "name": "护喵使者",
+      "iconFileName": "护喵使者",
+      "description": "-护喵使者-\n\n完成猫城所有主线任务，并击败拉·派斯特后获得"
+    },
+    {
+      "id": 4,
+      "rarity": 2,
+      "name": "甜蜜信徒",
+      "iconFileName": "甜蜜信徒",
+      "description": "-甜蜜信徒-\n\n累计食用100块慕斯蛋糕后获得"
+    }
+  ]
+}

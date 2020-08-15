@@ -1,0 +1,758 @@
+{
+  "tasks": [
+    [
+      {
+        "id": 0,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "小富即安",
+        "description": "今日累计获得5000灵感币",
+        "taskRewards": {
+          "exp": 200,
+          "titleId": -1,
+          "activityValue": 20,
+          "props": [
+            {
+              "id": 6,
+              "num": 1
+            },
+            {
+              "id": -1,
+              "num": 500
+            },
+            {
+              "id": -2,
+              "num": 10
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 0,
+            "requirementId": -1,
+            "description": "灵感币",
+            "requiredNum": 5000,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "万能锁匠",
+        "description": "打开两次上锁的宝箱",
+        "taskRewards": {
+          "exp": 200,
+          "titleId": -1,
+          "activityValue": 10,
+          "props": [
+            {
+              "id": 6,
+              "num": 1
+            },
+            {
+              "id": -1,
+              "num": 500
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 13,
+            "requirementId": 0,
+            "description": "上锁的宝箱",
+            "requiredNum": 2,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "牛刀小试",
+        "description": "今日累计击杀20只小怪",
+        "taskRewards": {
+          "exp": 200,
+          "titleId": -1,
+          "activityValue": 15,
+          "props": [
+            {
+              "id": 6,
+              "num": 2
+            },
+            {
+              "id": -1,
+              "num": 1000
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 2,
+            "isIgnoreId": true,
+            "requirementId": 0,
+            "description": "小怪",
+            "requiredNum": 20,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "赏金路牌",
+        "description": "今日累计接取3次路牌悬赏",
+        "taskRewards": {
+          "exp": 200,
+          "titleId": -1,
+          "activityValue": 20,
+          "props": [
+            {
+              "id": 6,
+              "num": 2
+            },
+            {
+              "id": -2,
+              "num": 5
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 9,
+            "isIgnoreId": true,
+            "requirementId": 0,
+            "description": "路牌悬赏",
+            "requiredNum": 3,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "挥金如土",
+        "description": "今日累计消费3000灵感币",
+        "taskRewards": {
+          "exp": 200,
+          "titleId": -1,
+          "activityValue": 5,
+          "props": [
+            {
+              "id": 6,
+              "num": 1
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": -1,
+            "type": 0,
+            "requirementId": -1,
+            "description": "灵感币",
+            "requiredNum": 3000,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "小睡怡情",
+        "description": "累计在地图生存5分钟以上",
+        "taskRewards": {
+          "exp": 100,
+          "titleId": -1,
+          "activityValue": 10,
+          "props": [
+            {
+              "id": -1,
+              "num": 500
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 10,
+            "requirementId": 0,
+            "description": "生存时间",
+            "requiredNum": 5,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "小本买卖",
+        "description": "在小推车购买2次货物",
+        "taskRewards": {
+          "exp": 200,
+          "titleId": -1,
+          "activityValue": 15,
+          "props": [
+            {
+              "id": -1,
+              "num": 200
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 11,
+            "requirementId": 0,
+            "description": "购物",
+            "requiredNum": 2,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "type": 0,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 0,
+        "title": "浅尝即止",
+        "description": "今日累计饮用樱桃甜酒2次",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 5,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": -1,
+            "type": 0,
+            "requirementId": 1,
+            "description": "樱桃甜酒",
+            "requiredNum": 2,
+            "currentNum": 0
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": 0,
+        "type": 1,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "title": "初入猫城",
+        "description": "第一次进入猫城领域",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": -1,
+              "num": 1000
+            },
+            {
+              "id": -2,
+              "num": 50
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 12,
+            "requirementId": 0,
+            "description": "进入猫城领域",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "type": 1,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "isIncludeDialogue": true,
+        "title": "初来乍到[1/6]",
+        "description": "和喵栗对话",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 1,
+            "requirementId": 0,
+            "description": "对话",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "isIncludeDialogue": true,
+        "title": "初来乍到[2/6]",
+        "description": "在猫城采摘10个樱桃后交给喵栗",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": 1,
+              "num": 1
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 0,
+            "type": 0,
+            "isConsume": true,
+            "requirementId": 7,
+            "description": "采摘樱桃",
+            "requiredNum": 10,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": 1,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "isAutoComplete": true,
+        "isIncludeDialogue": true,
+        "title": "初来乍到[3/6]",
+        "description": "找到路牌，接取任务",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 9,
+            "isIgnoreId": true,
+            "requirementId": 0,
+            "description": "接取路牌悬赏任务",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": 1,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "isIncludeDialogue": true,
+        "title": "初来乍到[4/6]",
+        "description": "盗鼠到处偷东西，击败十只盗鼠",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 2,
+            "requirementId": 0,
+            "description": "击败盗鼠",
+            "requiredNum": 10,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": 1,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "isIncludeDialogue": true,
+        "title": "初来乍到[5/6]",
+        "description": "去小推车前和神秘商人对话",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 1,
+            "requirementId": 1,
+            "description": "对话",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": 1,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "isIncludeDialogue": true,
+        "title": "初来乍到[6/6]",
+        "description": "开上锁的小宝箱",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 13,
+            "requirementId": 0,
+            "description": "开启宝箱",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "type": 1,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 1,
+        "title": "初来乍到",
+        "description": "完成主线任务·初来乍到",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": -1,
+              "num": 8000
+            },
+            {
+              "id": -2,
+              "num": 100
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 4,
+            "requirementId": 6,
+            "description": "初来乍到",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": 0,
+        "type": 2,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 2,
+        "title": "人格初养成",
+        "description": "人格图鉴收藏达到三个及以上",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": 0,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 0,
+            "type": 8,
+            "requirementId": 0,
+            "description": "人格数",
+            "requiredNum": 3,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "type": 2,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 2,
+        "title": "腰缠万贯",
+        "description": "累计获得1000000灵感币",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": 1,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 0,
+            "type": 0,
+            "requirementId": -1,
+            "description": "灵感币",
+            "requiredNum": 1000000,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": 2,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 2,
+        "title": "酒罐子",
+        "description": "累计饮用50杯樱桃甜酒",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": 2,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": -1,
+            "type": 0,
+            "requirementId": 1,
+            "description": "樱桃甜酒",
+            "requiredNum": 50,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": 2,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 2,
+        "title": "猫城守护者",
+        "description": "完成猫城所有主线，并击败拉·派斯特后获得",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": 3,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 2,
+            "requirementId": 1,
+            "description": "拉·派斯特",
+            "requiredNum": 1,
+            "currentNum": 0
+          },
+          {
+            "flag": 1,
+            "type": 4,
+            "requirementId": 14,
+            "description": "猫城主线",
+            "requiredNum": 1,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": 2,
+        "state": 1,
+        "activeTaskId": -1,
+        "activeTaskType": 2,
+        "title": "甜食主义",
+        "description": "累计食用100块慕斯蛋糕",
+        "taskRewards": {
+          "exp": 0,
+          "titleId": 4,
+          "activityValue": 0,
+          "props": []
+        },
+        "taskRequirements": [
+          {
+            "flag": -1,
+            "type": 0,
+            "requirementId": 0,
+            "description": "慕斯蛋糕",
+            "requiredNum": 100,
+            "currentNum": 0
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": 0,
+        "type": 3,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 3,
+        "isAutoComplete": true,
+        "title": "猫城战斗悬赏",
+        "description": "在猫城击败五只毛线怪，毛线怪有几率出现在猫城的草丛里",
+        "taskRewards": {
+          "exp": 500,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": -1,
+              "num": 500
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 2,
+            "requirementId": 0,
+            "description": "毛线怪",
+            "requiredNum": 5,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "type": 3,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 3,
+        "isAutoComplete": true,
+        "title": "猫城采集悬赏",
+        "description": "在猫城采集15颗樱桃。樱桃生长在猫城的云朵树上",
+        "taskRewards": {
+          "exp": 500,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": -1,
+              "num": 500
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 0,
+            "requirementId": 7,
+            "description": "樱桃",
+            "requiredNum": 15,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": 3,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 3,
+        "isAutoComplete": true,
+        "title": "猫城游历悬赏",
+        "description": "在猫城生存时间达到五分钟以上，昏迷将重新计时",
+        "taskRewards": {
+          "exp": 500,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": -1,
+              "num": 500
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 0,
+            "type": 10,
+            "requirementId": 0,
+            "description": "生存时间",
+            "requiredNum": 5,
+            "currentNum": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": 3,
+        "state": 0,
+        "activeTaskId": -1,
+        "activeTaskType": 3,
+        "isAutoComplete": true,
+        "title": "猫城探索悬赏",
+        "description": "在猫城寻找并开启五个宝箱。宝箱随机刷新在地图的各个角落，用心观察哟～",
+        "taskRewards": {
+          "exp": 500,
+          "titleId": -1,
+          "activityValue": 0,
+          "props": [
+            {
+              "id": -1,
+              "num": 500
+            }
+          ]
+        },
+        "taskRequirements": [
+          {
+            "flag": 1,
+            "type": 13,
+            "requirementId": 0,
+            "description": "宝箱",
+            "requiredNum": 5,
+            "currentNum": 0
+          }
+        ]
+      }
+    ]
+  ]
+}

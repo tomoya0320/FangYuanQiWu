@@ -1,0 +1,79 @@
+{
+	"content": [
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "这会你可以告诉我这个地方叫什么了么？"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "这里是猫城~（指了指东北方向）起源于那只大猫入睡的地方。"
+		},
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "......大猫？"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 1,
+			"text": "嗯，他是城主，以前他那么温柔。"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "后来不知道发生了什么，他变得暴躁，攻击靠近他的一切。"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 1,
+			"text": "真希望有一天它能变回原来的样子..."
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "不说这个啦，顺着这条路走下去有个路牌，猫城有三个路牌。"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "它会指明你想去的地方，路牌的悬赏可以让你得到相应的报酬。"
+		},
+		{
+			"category": "task",
+			"taskType": 1,
+			"taskId": 3,
+			"refuse": [
+				{
+					"category": "dialog",
+					"role": "我",
+					"illustrationIndex": 0,
+					"text": "我一会再去看看"
+				}
+			],
+			"accept": [
+				{
+					"category": "dialog",
+					"role": "我",
+					"illustrationIndex": 0,
+					"text": "还有报酬，我现在去瞅瞅"
+				}
+			]
+		}
+	]
+}

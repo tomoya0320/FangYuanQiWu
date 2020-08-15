@@ -1,0 +1,38 @@
+{
+  "npcs": [
+    {
+      "id": 0,
+      "name": "喵栗",
+      "handbookIconFileName": "NPC_喵栗_图鉴",
+      "illustrationFileNames": [
+        "NPC_喵栗_正常状态",
+        "NPC_喵栗_叙述任务状态"
+      ],
+      "dialogueList": [
+        {
+          "taskType": 1,
+          "taskId": 1
+        },
+        {
+          "taskType": 1,
+          "taskId": 2,
+          "requiredTask": {
+            "type": 1,
+            "id": 1,
+            "stateFlag": 3
+          }
+        },
+        {
+          "taskType": 1,
+          "taskId": 3,
+          "isTransfer": true,
+          "requiredTask": {
+            "type": 1,
+            "id": 2,
+            "stateFlag": 3
+          }
+        }
+      ]
+    }
+  ]
+}

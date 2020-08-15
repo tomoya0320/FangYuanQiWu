@@ -1,0 +1,209 @@
+{
+  "props": [
+    {
+      "id": -2,
+      "name": "钻石",
+      "iconFileName": "钻石",
+      "flatIconFileName": "interface_ico_jingshi",
+      "description": "用于抽卡"
+    },
+    {
+      "id": -1,
+      "name": "金币",
+      "iconFileName": "金币",
+      "flatIconFileName": "interface_ico_linggan",
+      "description": "用于购买物资"
+    },
+    {
+      "id": 0,
+      "class": 0,
+      "name": "慕斯蛋糕",
+      "iconFileName": "慕斯蛋糕",
+      "flatIconFileName": "慕斯蛋糕",
+      "description": "回复100生命值。\n获得途径：开宝箱、每日任务、回血树桩小概率刷新。",
+      "price": 100,
+      "hpRecovery": 100,
+      "coolTime": 3,
+      "buffs": [
+        {
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "class": 0,
+      "name": "樱桃甜酒",
+      "iconFileName": "樱桃甜酒",
+      "flatIconFileName": "樱桃甜酒",
+      "description": "回复50生命值。\n获得途径：开宝箱、每日任务、回血树桩刷新、喵栗处购买。",
+      "price": 100,
+      "hpRecovery": 50,
+      "coolTime": 3,
+      "buffs": [
+        {
+          "id": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "class": 1,
+      "name": "尊贵宝箱",
+      "iconFileName": "尊贵宝箱",
+      "flatIconFileName": "尊贵宝箱",
+      "description": "使用后必得1000灵感，20樱桃甜酒，10慕斯蛋糕，有机会额外获得50晶石或随机皮肤碎片之一。\n获得途径：击败boss掉落，击败精英怪，极小概率掉落。",
+      "price": 100,
+      "fixedContents": {
+        "props": [
+          {
+            "id": -1,
+            "num": 1000
+          },
+          {
+            "id": 0,
+            "num": 10
+          },
+          {
+            "id": 1,
+            "num": 20
+          }
+        ]
+      },
+      "randomContents": {
+        "props": [
+          {
+            "id": -2,
+            "num": 50,
+            "probability": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "class": 1,
+      "name": "初级宝箱",
+      "iconFileName": "初级宝箱",
+      "flatIconFileName": "初级宝箱",
+      "description": "使用后必得50灵感，1～3樱桃甜酒，1慕斯蛋糕，有较小概率获得5晶石。获得途径：击败小怪有几率掉落、击败精英怪大概率掉落。",
+      "price": 100,
+      "fixedContents": {
+        "props": [
+          {
+            "id": 0,
+            "num": 1
+          },
+          {
+            "id": -1,
+            "num": 50
+          }
+        ]
+      },
+      "randomContents": {
+        "props": [
+          {
+            "id": 1,
+            "num": 5,
+            "range": {
+              "min": 1,
+              "max": 3
+            }
+          },
+          {
+            "id": -2,
+            "num": 5,
+            "probability": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "class": 2,
+      "name": "万能钥匙",
+      "iconFileName": "万能钥匙",
+      "flatIconFileName": "万能钥匙",
+      "description": "开启上锁的宝箱。\n获得途径：NPC任务获得、每日可在商人喵一见出购买。",
+      "price": 100
+    },
+    {
+      "id": 5,
+      "class": 3,
+      "personalityId": 0,
+      "name": "Player1的碎片",
+      "iconFileName": "人格碎片0",
+      "flatIconFileName": "人格碎片0",
+      "description": "50个碎片获得对应角色，后续可以用来角色升星。\n获得途径：抽奖、精英怪boss掉落、NPC任务。",
+      "price": 1
+    },
+    {
+      "id": 6,
+      "class": 1,
+      "name": "日常伴手礼",
+      "iconFileName": "日常伴手礼",
+      "flatIconFileName": "work_ico_banshouli",
+      "description": "可以获得一定量的物资。",
+      "price": 100,
+      "fixedContents": {
+        "props": [
+          {
+            "id": 0,
+            "num": 8
+          },
+          {
+            "id": 1,
+            "num": 6
+          },
+          {
+            "id": -1,
+            "num": 1000
+          }
+        ]
+      },
+      "randomContents": {
+
+      }
+    },
+    {
+      "id": 7,
+      "class": 2,
+      "name": "樱桃",
+      "iconFileName": "樱桃",
+      "flatIconFileName": "樱桃",
+      "description": "任务道具，用于制作樱桃甜酒。\n获得途径：地图采摘",
+      "price": 100
+    },
+    {
+      "id": 8,
+      "class": 2,
+      "name": "通行证",
+      "iconFileName": "通行证",
+      "flatIconFileName": "通行证",
+      "description": "任务道具，用于交给商人换取金币。\n获得途径：击杀小怪",
+      "price": 100
+    },
+    {
+      "id": 9,
+      "class": 0,
+      "name": "速溶咖啡",
+      "iconFileName": "速溶咖啡",
+      "flatIconFileName": "速溶咖啡",
+      "description": "回复20点精力。\n获得途径：喵栗处购买、开宝箱、每日任务。",
+      "price": 100,
+      "energyRecovery": 20,
+      "coolTime": 3
+    },
+    {
+      "id": 10,
+      "class": 0,
+      "name": "猫屎咖啡",
+      "iconFileName": "猫屎咖啡",
+      "flatIconFileName": "猫屎咖啡",
+      "description": "回复50点精力。\n获得途径：喵栗处购买、开宝箱、每日任务。",
+      "price": 100,
+      "energyRecovery": 50,
+      "coolTime": 3
+    }
+  ]
+}

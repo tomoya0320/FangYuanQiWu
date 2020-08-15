@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Json
+  m_EditorClassIdentifier: 
+  m_GroupName: Json
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 052f8350f82e5154a9934747c2ba4e94
+  m_SerializeEntries:
+  - m_GUID: 1d1db884f6f2cca40936e3c022295c22
+    m_Address: Dialogue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    m_MainAsset: {fileID: 102900000, guid: 1d1db884f6f2cca40936e3c022295c22, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 1d1db884f6f2cca40936e3c022295c22, type: 3}
+  - m_GUID: 29cda3c45d5b474449b21fad13dc7def
+    m_Address: titles
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2b15f640d9e87a84191c376bdd58d9dc
+    m_Address: buffs
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3322af716f3db0e40afec8c8f45e8b3c
+    m_Address: mainStoryMails
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 490fa623ea592214f9dd757f4b5f2c99
+    m_Address: maps
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5643dac2f2958134ca9630500a6b7332
+    m_Address: npcs
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 72a16b6b2212d854eafef0a45bad3fe8
+    m_Address: activityGifts
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8edde51d22df7b44a81074c06928311c
+    m_Address: tasks
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 90cf5207c458a7d488c566bc13eb03a2
+    m_Address: props
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 92280b3ad953abc43b05740598c371a5
+    m_Address: monsters
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: dbf148b96824395408a14e774b46913d
+    m_Address: personalities
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fc9a8b1c88e52654196c7bc107cc1649
+    m_Address: mainStoryLetters
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 791ad02787d3e1c4c8d6fee704aa6115, type: 2}
+    - {fileID: 11400000, guid: d5ba04cb00469c64d854d2d3f038ce06, type: 2}

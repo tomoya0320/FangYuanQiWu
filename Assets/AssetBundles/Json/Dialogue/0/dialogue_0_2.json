@@ -1,0 +1,23 @@
+{
+	"content": [
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "请...请问？"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "呦，新面孔。你好，我是喵栗"
+		},
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "喵栗你好，叫我{0}就好"
+		}
+	]
+}

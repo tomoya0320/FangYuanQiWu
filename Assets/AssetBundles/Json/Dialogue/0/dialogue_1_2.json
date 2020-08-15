@@ -1,0 +1,57 @@
+{
+	"content": [
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "我回来了，这是你要的樱桃。"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "谢谢~速度很快嘛。"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 1,
+			"text": "喏，作为答谢，这是我做好的樱桃甜酒，送你一杯。"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "别急着喝！不要小看我喵栗调的甜酒哦，它能缓解你的伤痛~"
+		},
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "这么神奇？可以教教我吗？"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 1,
+			"text": "独家秘制，小本生意，不能外传！"
+		},
+		{
+			"category": "dialog",
+			"role": "喵栗",
+			"roleId": 0,
+			"illustrationIndex": 0,
+			"text": "这样吧，下次想喝甜酒了，带着足够樱桃来找我~给你打折！"
+		},
+		{
+			"category": "dialog",
+			"role": "我",
+			"illustrationIndex": 0,
+			"text": "好吧..."
+		}
+	]
+}

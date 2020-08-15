@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: FlatIcon
+  m_EditorClassIdentifier: 
+  m_GroupName: FlatIcon
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5e6dd0715a3ec7c47a2d48f1dd885a5a
+  m_SerializeEntries:
+  - m_GUID: 0958f9b144a92be478e175cdaaaa2c7b
+    m_Address: work_ico_banshouli
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 24be6336f801d374c95cde40ecc7ac1d
+    m_Address: work_ico_chengjiu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 62045d797803aa2419da8b84f5dc58c9
+    m_Address: interface_ico_jingshi
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 972e527d062aedd40b03bc8fea7b0253
+    m_Address: interface_ico_jingli
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: aca4d9a813b16b64d9a4faebd79ab928
+    m_Address: work_ico_huoyue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b52dfab721e60934ea0f12a6b491d8f9
+    m_Address: work_ico_jingyan
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c51e5f56ad6b8c74f9d0019e68259f63
+    m_Address: interface_ico_linggan
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    - Preload
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fbfc37952690c247a4386a4a4d1682d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 45ec3248b47476048b3267e8cdb2500a, type: 2}
+    - {fileID: 11400000, guid: ff0699437b3a34e4f89d848ef9e7e9a7, type: 2}
