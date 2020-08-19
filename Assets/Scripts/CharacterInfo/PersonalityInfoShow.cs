@@ -92,7 +92,7 @@ public class PersonalityInfoShow : MonoBehaviour
     {
         if (ownedPersonalities[currentIndex].rarity == 5)
         {
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "已达到最高星级！"));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "已达到最高星级！"));
         }
         else
         {
@@ -100,7 +100,7 @@ public class PersonalityInfoShow : MonoBehaviour
             {
                 if (temp.GetComponent<UpStarProp>().mask.activeSelf)
                 {
-                    MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "材料不足！"));
+                    MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "材料不足！"));
                     return;
                 }
             }
@@ -110,7 +110,7 @@ public class PersonalityInfoShow : MonoBehaviour
             }
             DataBase.UpPersonalityStar(ownedPersonalities[currentIndex]);
             UpdatePersonalityInfo();
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "升星成功！"));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "升星成功！"));
         }
     }
 }

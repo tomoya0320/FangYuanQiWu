@@ -22,7 +22,7 @@ public class WButton : Button {
         tween = transform.DOScale(0.92f, 0.1f).OnComplete(() => tween = null);
       }
       if (clickSound && audioClip != null) {
-        SoundManager.Play(audioClip);
+        SoundManager.Instance.Play(audioClip);
       }
     }
   }

@@ -60,8 +60,8 @@ public class MessageShow : MonoBehaviour
     }
     public void ShowNextMessage()
     {
-        MessageCenter.RemoveMessage(message);
-        MessageCenter.ShowMessage();
+        MessageCenter.Instance.RemoveMessage(message);
+        MessageCenter.Instance.ShowMessage();
         Destroy(gameObject);
     }
 }

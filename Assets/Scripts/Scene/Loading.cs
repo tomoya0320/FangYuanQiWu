@@ -62,7 +62,7 @@ public class Loading : MonoBehaviour
         maskOut.gameObject.SetActive(true);
         maskOut.DOFade(1.0f, 0.5f).OnComplete(() =>
         {
-            BgmManager.PlayBgm();
+            BgmManager.Instance.PlayBgm();
             handle.Result.ActivateAsync();
         });
     }

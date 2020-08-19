@@ -49,7 +49,7 @@ public class UserFeedback : MonoBehaviour
             {
                 if(completed>= total)
                 {
-                    MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "感谢您的反馈！"));
+                    MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "感谢您的反馈！"));
                 }
             });
             //执行请求
@@ -60,12 +60,12 @@ public class UserFeedback : MonoBehaviour
         catch (COSXML.CosException.CosClientException clientEx)
         {
             //请求失败
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "发送失败，错误信息：" + clientEx));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "发送失败，错误信息：" + clientEx));
         }
         catch (COSXML.CosException.CosServerException serverEx)
         {
             //请求失败
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "发送失败，错误信息：" + serverEx.GetInfo()));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "发送失败，错误信息：" + serverEx.GetInfo()));
         }
     }
 }

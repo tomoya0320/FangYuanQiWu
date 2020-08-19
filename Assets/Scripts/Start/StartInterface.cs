@@ -15,7 +15,7 @@ public class StartInterface : MonoBehaviour
 
     public void PlayStartAnim()
     {
-        BgmManager.StopBgm();
+        BgmManager.Instance.StopBgm();
         maskOut.alpha = 0;
         maskOut.gameObject.SetActive(true);
         maskOut.DOFade(1.0f, 0.5f).OnComplete(() =>

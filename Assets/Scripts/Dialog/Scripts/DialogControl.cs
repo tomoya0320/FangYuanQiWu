@@ -127,7 +127,7 @@ public class DialogControl : MonoBehaviour {
                 {
                     if (taskInfo != null)
                     {
-                        MessageCenter.AddMessage(new Message(MessageStyle.Slide, "接受任务：[" + DataBase.GetTask(taskInfo.type, taskInfo.id).title + "]"));
+                        MessageCenter.Instance.AddMessage(new Message(MessageStyle.Slide, "接受任务：[" + DataBase.GetTask(taskInfo.type, taskInfo.id).title + "]"));
                         DataBase.ActiveTask(taskInfo.type, taskInfo.id);
                         dialogNPC.dialogueIndex += dialogNPC.IsTransfer() ? 1 : 0;
                         taskInfo = null;

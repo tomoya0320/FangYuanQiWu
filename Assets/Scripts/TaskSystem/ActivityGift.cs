@@ -38,7 +38,7 @@ public class ActivityGift : MonoBehaviour
             DataBase.AddPropById((int)temp["id"].n, (int)temp["num"].n);
             JSONObject propInfo = DataBase.GetPropInfoById((int)temp["id"].n);
             Sprite propIcon = await Addressables.LoadAssetAsync<Sprite>(propInfo["iconFileName"].str).Task;
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得{0}*{1}", propInfo["name"].str, temp["num"].n), propIcon));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得{0}*{1}", propInfo["name"].str, temp["num"].n), propIcon));
         }
         DataBase.AddReceivedActivityGiftByIndex(giftIndex);
         button.image.sprite = openImg;

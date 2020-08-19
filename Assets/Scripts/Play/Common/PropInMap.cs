@@ -36,7 +36,7 @@ public class PropInMap : MonoBehaviour
             playerAnim.SetTrigger("pick");
         }
 
-        MessageCenter.AddMessage(new Message(MessageStyle.ColorFade,
+        MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
         string.Format("获得道具:{0}*{1}", propInfo["name"].str, propNum), propIcon, 0.4f, 0.8f));
         DataBase.AddPropById(propId, propNum);
 

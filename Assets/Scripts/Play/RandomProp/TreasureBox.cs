@@ -43,7 +43,7 @@ public class TreasureBox : MonoBehaviour
         }
         else
         {
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "需要道具：" + error));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "需要道具：" + error));
         }
     }
     public async void GetProp()
@@ -60,7 +60,7 @@ public class TreasureBox : MonoBehaviour
 
             JSONObject propInfo = DataBase.GetPropInfoById(prop.id);
             Sprite propIcon = await Addressables.LoadAssetAsync<Sprite>(propInfo["iconFileName"].str).Task;
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得{0}*{1}", propInfo["name"].str, prop.num), propIcon));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得{0}*{1}", propInfo["name"].str, prop.num), propIcon));
         }
 
         TaskCenter.UpdateTaskState(RequirementType.OpenTreasureBoxInMap.ToString(), 0, 1);

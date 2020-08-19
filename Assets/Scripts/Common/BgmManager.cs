@@ -1,29 +1,29 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-public class BgmManager : MonoBehaviour
+public class BgmManager : SingletonMono<BgmManager>
 {
-    private static Tween tween;
-    private static AudioClip audioClip;
-    private static float keyValue;
-    private static float keySwitch;
-    private static AudioSource audioSource;
-    private static SettingType settingType;
+    private Tween tween;
+    private AudioClip audioClip;
+    private float keyValue;
+    private float keySwitch;
+    private AudioSource audioSource;
+    private SettingType settingType;
 
-    private void Start()
-    {
-        settingType = SettingType.Bgm;
-        audioSource = GetComponent<AudioSource>();
-        audioClip = audioSource.clip;
-        UpdateBgm();
-    }
-    public static void UpdateBgm()
+  protected override void Awake() {
+    base.Awake();
+    settingType = SettingType.Bgm;
+    audioSource = GetComponent<AudioSource>();
+    audioClip = audioSource.clip;
+    UpdateBgm();
+  }
+  public void UpdateBgm()
     {
         keySwitch = PlayerPrefs.GetInt(settingType.ToString() + "Switch");
         keyValue = 0.01f * PlayerPrefs.GetInt(settingType.ToString() + "Value");
         audioSource.volume = keySwitch * keyValue;
     }
-    public static void StopBgm()
+    public void StopBgm()
     {
         if (tween != null)
         {
@@ -35,7 +35,7 @@ public class BgmManager : MonoBehaviour
             tween = null;
         });
     }
-    public static void PlayBgm()
+    public void PlayBgm()
     {
         audioSource.clip = audioClip;
         if (tween != null)
@@ -48,7 +48,7 @@ public class BgmManager : MonoBehaviour
             tween = null;
         });
     }
-    public static void ChangeBgm(AudioClip clip)
+    public void ChangeBgm(AudioClip clip)
     {
         audioClip = clip;
     }

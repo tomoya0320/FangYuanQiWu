@@ -147,7 +147,7 @@ namespace Wzb
                 if (completed && state == TaskState.InProcess)
                 {
                     state = TaskState.Completed;
-                    MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, string.Format("任务：{0} 已完成！", title)));
+                    MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, string.Format("任务：{0} 已完成！", title)));
                     if (isAutoComplete)
                     {
                         DataBase.CompleteTask(this);
@@ -179,7 +179,7 @@ namespace Wzb
                 DataBase.AddPropById(prop.id, prop.num);
                 JSONObject propInfo = DataBase.GetPropInfoById(prop.id);
                 Sprite propIcon = await Addressables.LoadAssetAsync<Sprite>(propInfo["iconFileName"].str).Task;
-                MessageCenter.AddMessage(new Message(MessageStyle.ColorFade,string.Format("获得{0}*{1}", propInfo["name"].str, prop.num), propIcon));
+                MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,string.Format("获得{0}*{1}", propInfo["name"].str, prop.num), propIcon));
             }
             if (activeTaskId >= 0)
             {

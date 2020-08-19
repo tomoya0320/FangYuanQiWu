@@ -43,10 +43,10 @@ public class OpenOrCloseUIWithAnim : MonoBehaviour,IBack
     }
     private void AddToBackStack()
     {
-        BackManager.AddToBackStack(this);
+        BackManager.Instance.AddToBackStack(this);
     }
     private void RemoveFromBackStack()
     {
-        BackManager.RemoveFromBackStack(this);
+        BackManager.Instance.RemoveFromBackStack(this);
     }
 }

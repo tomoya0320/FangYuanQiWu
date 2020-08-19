@@ -17,11 +17,11 @@ public class ExchangeCode : MonoBehaviour
     {
         if (string.IsNullOrEmpty(inputField.text))
         {
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "请输入兑换码！"));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "请输入兑换码！"));
         }
         else if (inputField.text != "1053271651")
         {
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "兑换码错误！"));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "兑换码错误！"));
         }
         else
         {   

@@ -624,7 +624,7 @@ public class DataBase
     public static void AddExp(int exp)
     {
         userData.exp += exp;
-        MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得经验值{0}", exp)));
+        MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得经验值{0}", exp)));
         TaskCenter.UpdateTaskState(RequirementType.Exp.ToString(), 0, exp);
         int oLevel = userData.lv;
         while (userData.exp >= Utils.CalNeededExp(userData.lv))
@@ -636,7 +636,7 @@ public class DataBase
         {
             TaskCenter.UpdateTaskState(RequirementType.Lv.ToString(), 0, userData.lv - oLevel);
             string tip = string.Format("等级提升至Lv{0}", userData.lv);
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, tip));
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, tip));
         }
         EventCenter.Broadcast(Wzb.EventType.UpdateUserInfo);
         SaveUserData();
@@ -662,7 +662,7 @@ public class DataBase
         if (!IsUnlockedTitleById(id))
         {
             userData.unlockedTitles.Add(id);
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade,
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
             "获得成就：" + titleInfos[id]["name"].str));
             EventCenter.Broadcast(Wzb.EventType.UpdateTitleInfo);
             SaveUserData();
@@ -674,7 +674,7 @@ public class DataBase
         {
             Prop repeatedProp = JsonUtility.FromJson<Prop>(GetPersonalityInfoByIndex(id)["repeatedProp"].ToString());
             AddPropById(repeatedProp.id, repeatedProp.num);
-            MessageCenter.AddMessage(new Message(MessageStyle.ColorFade,
+            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
             string.Format("获得：{0}*{1}", GetPropInfoById(repeatedProp.id)["name"].str, repeatedProp.num)));
             return;
         }
@@ -685,7 +685,7 @@ public class DataBase
         EventCenter.Broadcast(Wzb.EventType.UpdatePersonalityInfo);
   
         //这个提示之后再换了
-        MessageCenter.AddMessage(new Message(MessageStyle.ColorFade,
+        MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
         "获得人格：" + GetPersonalityInfoByIndex(id)["name"].str));
 
         TaskCenter.UpdateTaskState(RequirementType.PersonalityNum.ToString(), 0, 1);

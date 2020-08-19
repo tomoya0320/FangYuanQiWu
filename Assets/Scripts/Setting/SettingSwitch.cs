@@ -61,12 +61,12 @@ public class SettingSwitch : MonoBehaviour
         {
             case SettingType.Bgm:
                 {
-                    BgmManager.UpdateBgm();
+                    BgmManager.Instance.UpdateBgm();
                     break;
                 }     
             case SettingType.Sound:
                 {
-                    SoundManager.UpdateSound();
+                    SoundManager.Instance.UpdateSound();
                     break;
                 }
         }

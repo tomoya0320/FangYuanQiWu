@@ -22,13 +22,13 @@ public class SceneJump : MonoBehaviour
         {
             if(DataBase.GetCurrentAP() < consumeAP)
             {
-                MessageCenter.AddMessage(new Message(MessageStyle.ColorFade, "体力不足！"));
+                MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "体力不足！"));
                 return;
             }
             DataBase.SetAPVariation(-consumeAP);
         }
-        BackManager.ClearBackStack();
-        BgmManager.StopBgm();
+        BackManager.Instance.ClearBackStack();
+        BgmManager.Instance.StopBgm();
    
         if (maskOut)
         {
@@ -47,7 +47,7 @@ public class SceneJump : MonoBehaviour
         if (!string.IsNullOrEmpty(nextBgm))
         {
             audioClip = await Addressables.LoadAssetAsync<AudioClip>(nextBgm).Task;
-            BgmManager.ChangeBgm(audioClip);
+            BgmManager.Instance.ChangeBgm(audioClip);
         }
     }
 }
