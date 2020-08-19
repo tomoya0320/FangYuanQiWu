@@ -1,33 +1,31 @@
-﻿namespace Wzb
-{
-    public enum EventType
-    {
-        UpdateUserInfo,
+﻿namespace Wzb {
+  public enum EventType {
+    UpdateUserInfo,
 
-        UpdatePropInfo,
-        UpdateTitleInfo,
+    UpdatePropInfo,
+    UpdateTitleInfo,
 
-        UpdateActivityValue,
+    UpdateActivityValue,
 
-        UpdatePersonalityHandbook,
-        UpdateNPCHandbook,
-        UpdatePropHandbook,
-        UpdateMainMapHandbook,
+    UpdatePersonalityHandbook,
+    UpdateNPCHandbook,
+    UpdatePropHandbook,
+    UpdateMainMapHandbook,
 
-        AddMainStoryMail,
-        AddSystemMail,
+    AddMainStoryMail,
+    AddSystemMail,
 
-        UpdateNewContentTip,
+    UpdateNewContentTip,
 
-        UpdateTaskView,
+    UpdateTaskView,
 
-        AddTaskToTrackInMap,
+    AddTaskToTrackInMap,
 
-        AddPropToKit,
-        RemovePropFromKit,
+    AddPropToKit,
+    RemovePropFromKit,
 
-        UpdateLive2D,
+    UpdateLive2D,
 
-        UpdatePersonalityInfo,
-    }
+    UpdatePersonalityInfo,
+  }
 }

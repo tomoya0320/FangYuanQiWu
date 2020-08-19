@@ -29,19 +29,19 @@ public class UserDataShowInMM : MonoBehaviour
     }
     public async void UpdateUserData()
     {
-        ap.text = DataBase.GetAPInfo();
+        ap.text = DataBase.APInfo;
         gold.text = DataBase.GetPropNumById(-1).ToString();
         crystal.text = DataBase.GetPropNumById(-2).ToString();
 
-        lv.text = DataBase.GetLevel().ToString();
-        nickname.text = DataBase.GetNickname();
-        title.text = DataBase.GetCurrentTitleName();
-        titleBg.color = DataBase.GetCurrentTitleColor();
-        float needEXP = Utils.CalNeededExp(DataBase.GetLevel());
-        expText.text = DataBase.GetUserExp() + "/" + needEXP;
-        expImg.fillAmount = DataBase.GetUserExp() / needEXP;
+        lv.text = DataBase.Level.ToString();
+        nickname.text = DataBase.Nickname;
+        title.text = DataBase.CurrentTitleName;
+        titleBg.color = DataBase.CurrentTitleColor;
+        float needEXP = Utils.CalNeededExp(DataBase.Level);
+        expText.text = DataBase.UserExp + "/" + needEXP;
+        expImg.fillAmount = DataBase.UserExp / needEXP;
 
         playerIcon.sprite = await Addressables.LoadAssetAsync<Sprite>
-        (DataBase.GetPersonalityInfoByIndex(DataBase.GetCurrentPersonalityId())["headIconFileName"].str).Task;
+        (DataBase.GetPersonalityInfoByIndex(DataBase.CurrentPersonalityId)["headIconFileName"].str).Task;
     }
 }

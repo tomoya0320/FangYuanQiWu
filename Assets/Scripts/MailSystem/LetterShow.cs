@@ -17,7 +17,7 @@ public class LetterShow : MonoBehaviour
         currentLetter = unreadMainStoryLetterList[0];
         if (unreadMainStoryLetterList.Count > 0)
         {
-            text.text = string.Format(currentLetter.text, DataBase.GetNickname());
+            text.text = string.Format(currentLetter.text, DataBase.Nickname);
             signature.text = currentLetter.signature;
             date.text = Convert.ToDateTime(DateTime.Now.Date).ToShortDateString();
         }

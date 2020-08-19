@@ -16,7 +16,7 @@ public class Live2DManager : MonoBehaviour
     }
     public async void UpdateLive2D()
     {
-        JSONObject playerInfo = DataBase.GetPersonalityInfoByIndex(DataBase.GetCurrentPersonalityId());
+        JSONObject playerInfo = DataBase.GetPersonalityInfoByIndex(DataBase.CurrentPersonalityId);
         if (currentLive2D)
         {
             Destroy(currentLive2D);

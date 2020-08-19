@@ -8,7 +8,7 @@ namespace Wzb
 
         public static void Init()
         {
-            tasks = DataBase.GetAllTaskList();
+            tasks = DataBase.AllTaskList;
             foreach (List<Task> taskList in tasks)
             {
                 foreach (Task task in taskList)

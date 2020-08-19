@@ -27,28 +27,28 @@ public class UserDataShowInPF : MonoBehaviour
     }
     public async void UpdateUserData()
     {
-        lv.text = DataBase.GetLevel().ToString();
-        nickname.text = DataBase.GetNickname();
-        signature.text = DataBase.GetSignature();
-        title.text = DataBase.GetCurrentTitleName();
-        float needEXP = Utils.CalNeededExp(DataBase.GetLevel());
-        expText.text = DataBase.GetUserExp() + "/" + needEXP;
-        expImg.fillAmount = DataBase.GetUserExp() / needEXP;
+        lv.text = DataBase.Level.ToString();
+        nickname.text = DataBase.Nickname;
+        signature.text = DataBase.Signature;
+        title.text = DataBase.CurrentTitleName;
+        float needEXP = Utils.CalNeededExp(DataBase.Level);
+        expText.text = DataBase.UserExp + "/" + needEXP;
+        expImg.fillAmount = DataBase.UserExp / needEXP;
 
-        account.text = "账号ID：" + DataBase.GetAccount();
+        account.text = "账号ID：" + DataBase.Account;
         unlockedDressNum.text = "装扮总数：" + 0;
-        unlockedAchievementNum.text = "成就总数：" + DataBase.GetUnlockedTitleNum();
-        unlockedMapNum.text = "解锁地图：" + DataBase.GetUnlockedMainMapNum();
-        unlockedPersonalityNum.text = "人格总数：" + DataBase.GetUnlockedPersonalityNum();
+        unlockedAchievementNum.text = "成就总数：" + DataBase.UnlockedTitleNum;
+        unlockedMapNum.text = "解锁地图：" + DataBase.UnlockedMainMapNum;
+        unlockedPersonalityNum.text = "人格总数：" + DataBase.UnlockedPersonalityNum;
        
         playerIcon.sprite = await Addressables.LoadAssetAsync<Sprite>
-        (DataBase.GetPersonalityInfoByIndex(DataBase.GetCurrentPersonalityId())["headIconFileName"].str).Task;
+        (DataBase.GetPersonalityInfoByIndex(DataBase.CurrentPersonalityId)["headIconFileName"].str).Task;
     }
     public void ChangeNickname()
     {
         if(nickname.text == "")
         {
-            nickname.text = DataBase.GetNickname();
+            nickname.text = DataBase.Nickname;
         }
         else
         {
@@ -59,7 +59,7 @@ public class UserDataShowInPF : MonoBehaviour
     {
         if (signature.text == "")
         {
-            signature.text = DataBase.GetSignature();
+            signature.text = DataBase.Signature;
         }
         else
         {

@@ -9,7 +9,7 @@ public class PlayerProperty : MonoBehaviour, IProperty
 
     private void Awake()
     {
-        playerProperty = (Personality)DataBase.GetCurrentPersonality().Clone();
+        playerProperty = (Personality)DataBase.CurrentPersonality.Clone();
     }
     private void Update()
     {

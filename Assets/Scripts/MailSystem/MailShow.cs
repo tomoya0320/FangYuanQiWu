@@ -63,7 +63,7 @@ public class MailShow : MonoBehaviour
         }
         show.SetActive(true);
         mailInList.GetComponent<Image>().sprite = selectedMail;
-        text.text = string.Format(mailInList.mail.text, DataBase.GetNickname());
+        text.text = string.Format(mailInList.mail.text, DataBase.Nickname);
         signature.text = mailInList.mail.signature;
         date.text = Convert.ToDateTime(mailInList.mail.dateTime).ToShortDateString();
 

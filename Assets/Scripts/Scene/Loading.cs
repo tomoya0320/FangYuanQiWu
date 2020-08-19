@@ -34,7 +34,7 @@ public class Loading : MonoBehaviour
     {
         if (Globe.nextSceneName.Contains("Map"))
         {
-            JSONObject playerInfo = DataBase.GetPersonalityInfoByIndex(DataBase.GetCurrentPersonalityId());
+            JSONObject playerInfo = DataBase.GetPersonalityInfoByIndex(DataBase.CurrentPersonalityId);
             PlayerInit.playerPrefab = await Addressables.LoadAssetAsync<GameObject>(playerInfo["playerPrefabName"].str).Task;
             int index = int.Parse(Globe.nextSceneName.Split('_')[1]);
             sceneNameTip.text = DataBase.GetMapInfoByIndex(index)["name"].str;

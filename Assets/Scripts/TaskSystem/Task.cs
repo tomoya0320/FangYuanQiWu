@@ -116,17 +116,17 @@ namespace Wzb
                     }
                 case RequirementType.Exp:
                     {
-                        requirement.currentNum = (int)DataBase.GetUserExp();
+                        requirement.currentNum = (int)DataBase.UserExp;
                         break;
                     }
                 case RequirementType.Lv:
                     {
-                        requirement.currentNum = DataBase.GetLevel();
+                        requirement.currentNum = DataBase.Level;
                         break;
                     }
                 case RequirementType.PersonalityNum:
                     {
-                        requirement.currentNum = DataBase.GetUnlockedPersonalityNum();
+                        requirement.currentNum = DataBase.UnlockedPersonalityNum;
                         break;
                     }      
                 case RequirementType.SurvivalTimeInMap:

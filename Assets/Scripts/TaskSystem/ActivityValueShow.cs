@@ -19,9 +19,9 @@ public class ActivityValueShow : MonoBehaviour
 
     public void UpdateInfo()
     {
-        currentActivityValueText.text = DataBase.GetActivityValue().ToString();
+        currentActivityValueText.text = DataBase.ActivityValue.ToString();
         currentActivityValueImg.fillAmount = Mathf.Clamp(
-            DataBase.GetActivityValue() / 100.0f, 0, 1.0f);
+            DataBase.ActivityValue / 100.0f, 0, 1.0f);
         foreach(ActivityGift activityGift in activityGifts)
         {
             activityGift.UpdateGiftState();

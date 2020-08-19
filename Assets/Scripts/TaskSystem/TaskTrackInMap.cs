@@ -15,7 +15,7 @@ public class TaskTrackInMap : MonoBehaviour
         GridLayoutGroup grid = taskTrackContent.GetComponent<GridLayoutGroup>();
         length = grid.cellSize.y + grid.spacing.y;
         int taskShowNum = 0;
-        foreach(List<Task> tasks in DataBase.GetAllTaskList())
+        foreach(List<Task> tasks in DataBase.AllTaskList)
         {
             foreach(Task task in tasks)
             {

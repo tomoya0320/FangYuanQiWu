@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IBack
-{
-    void Close();
+public interface IBack {
+  void Close();
 }
 public class BackManager : SingletonMono<BackManager> {
   public CanvasGroup canvasGroup;

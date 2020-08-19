@@ -28,7 +28,7 @@ public class UpStarProp : MonoBehaviour
         mask.SetActive(propNum < needNum);
         num.color = propNum < needNum ? Color.red : Color.white;
         icon.sprite = await Addressables.LoadAssetAsync<Sprite>
-        (DataBase.GetPropInfoById(propId)["iconFileName"].str).Task;
+        (DataBase.GetPropInfoById(propId)[StringMap.ICON_FILE_NAME].str).Task;
     }
     public void UpdateNum()
     {

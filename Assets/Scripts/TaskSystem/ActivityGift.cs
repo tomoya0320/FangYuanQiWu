@@ -22,7 +22,7 @@ public class ActivityGift : MonoBehaviour
     }
     public void UpdateGiftState()
     {
-        if (DataBase.GetActivityValue() >= neededActivityValue)
+        if (DataBase.ActivityValue >= neededActivityValue)
         {
             button.interactable = true;
         }

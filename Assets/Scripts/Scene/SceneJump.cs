@@ -20,7 +20,7 @@ public class SceneJump : MonoBehaviour
         }
         if (consumeAP > 0)
         {
-            if(DataBase.GetCurrentAP() < consumeAP)
+            if(DataBase.CurrentAP < consumeAP)
             {
                 MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "体力不足！"));
                 return;

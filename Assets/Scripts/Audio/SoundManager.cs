@@ -13,8 +13,8 @@ public class SoundManager : SingletonMono<SoundManager> {
     UpdateSound();
   }
   public void UpdateSound() {
-    keySwitch = PlayerPrefs.GetInt(settingType.ToString() + "Switch");
-    keyValue = 0.01f * PlayerPrefs.GetInt(settingType.ToString() + "Value");
+    keySwitch = PlayerPrefs.GetInt(settingType.ToString() + StringMap.SWITCH);
+    keyValue = 0.01f * PlayerPrefs.GetInt(settingType.ToString() + StringMap.VALUE);
     audioSource.volume = keySwitch * keyValue;
   }
   public void Play(AudioClip audioClip) {
