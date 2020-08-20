@@ -17,7 +17,7 @@ public class Title : MonoBehaviour {
     EventCenter.RemoveListener(Wzb.EventType.UpdateTitleInfo, UpdateInfo);
   }
   public void UpdateInfo() {
-    isUnlocked = DataBase.IsUnlockedTitleById(index);
+    isUnlocked = Database.IsUnlockedTitleById(index);
     button.interactable = isUnlocked;
     icon.color = Color.white * (isUnlocked ? 1.0f : 0.5f);
   }

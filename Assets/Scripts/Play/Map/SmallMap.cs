@@ -33,9 +33,9 @@ public class SmallMap : MonoBehaviour
         lastPlayerPos = PlayerController.GetTransform().position;
         lastPlayerAngle = PlayerController.GetTransform().eulerAngles;
         int mapId = int.Parse(SceneManager.GetActiveScene().name.Split('_')[1]);
-        mapName.text = DataBase.GetMapInfoByIndex(mapId)["name"].str;
+        mapName.text = Database.GetMapInfoByIndex(mapId)["name"].str;
         map.GetComponent<Image>().sprite = await Addressables.LoadAssetAsync<Sprite>
-            (DataBase.GetMapInfoByIndex(mapId)["smallMapFileName"].str).Task;
+            (Database.GetMapInfoByIndex(mapId)["smallMapFileName"].str).Task;
 
         MoveSmallMapAndPosCursor();
     }

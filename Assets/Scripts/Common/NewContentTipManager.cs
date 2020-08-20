@@ -16,8 +16,8 @@ public class NewContentTipManager : MonoBehaviour {
 
   private void Start() {
     EventCenter.AddListener<bool, NewContentType>(Wzb.EventType.UpdateNewContentTip, UpdateInfo);
-    UpdateInfo(DataBase.GetUnreadMainStoryLetterList().Count == 0 && DataBase.IsExistUnreceivedMail(), NewContentType.Mail);
-    UpdateInfo(DataBase.IsExistUnclaimedTask(), NewContentType.Task);
+    UpdateInfo(Database.GetUnreadMainStoryLetterList().Count == 0 && Database.IsExistUnreceivedMail(), NewContentType.Mail);
+    UpdateInfo(Database.IsExistUnclaimedTask(), NewContentType.Task);
   }
   private void OnDestroy() {
     EventCenter.RemoveListener<bool, NewContentType>(Wzb.EventType.UpdateNewContentTip, UpdateInfo);

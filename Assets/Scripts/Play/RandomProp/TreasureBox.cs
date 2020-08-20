@@ -30,9 +30,9 @@ public class TreasureBox : MonoBehaviour
         string error = "";
         foreach (Prop prop in needProps)
         {
-            if (DataBase.GetPropNumById(prop.id) < prop.num)
+            if (Database.GetPropNumById(prop.id) < prop.num)
             {
-                error += string.Format("[{0}*{1}]", DataBase.GetPropInfoById(prop.id)["name"].str, prop.num);
+                error += string.Format("[{0}*{1}]", Database.GetPropInfoById(prop.id)["name"].str, prop.num);
             }
         }
         if (string.IsNullOrEmpty(error))
@@ -50,15 +50,15 @@ public class TreasureBox : MonoBehaviour
     {
         foreach (Prop prop in needProps)
         {
-            DataBase.ConsumePropById(-1, prop.id, prop.num);
+            Database.ConsumePropById(-1, prop.id, prop.num);
         }
 
         foreach(RandomNumProp randomNumProp in randomNumProps)
         {
             Prop prop = new Prop(randomNumProp.id, UnityEngine.Random.Range(randomNumProp.min, randomNumProp.max + 1));
-            DataBase.AddPropById(prop.id, prop.num);
+            Database.AddPropById(prop.id, prop.num);
 
-            JSONObject propInfo = DataBase.GetPropInfoById(prop.id);
+            JSONObject propInfo = Database.GetPropInfoById(prop.id);
             Sprite propIcon = await Addressables.LoadAssetAsync<Sprite>(propInfo["iconFileName"].str).Task;
             MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, string.Format("获得{0}*{1}", propInfo["name"].str, prop.num), propIcon));
         }

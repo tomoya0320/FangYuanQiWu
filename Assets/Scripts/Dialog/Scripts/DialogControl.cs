@@ -119,8 +119,8 @@ public class DialogControl : MonoBehaviour {
         if (isNPCInTaskState) {
           if (taskInfo != null) {
             MessageCenter.Instance.AddMessage(new Message(MessageStyle.Slide, string.Format
-            (StringMap.ACCEPT_TASK, DataBase.GetTask(taskInfo.type, taskInfo.id).title)));
-            DataBase.ActiveTask(taskInfo.type, taskInfo.id);
+            (StringMap.ACCEPT_TASK, Database.GetTask(taskInfo.type, taskInfo.id).title)));
+            Database.ActiveTask(taskInfo.type, taskInfo.id);
             dialogNPC.dialogueIndex += dialogNPC.IsTransfer() ? 1 : 0;
             taskInfo = null;
           } else {
@@ -131,13 +131,13 @@ public class DialogControl : MonoBehaviour {
                   break;
                 }
               case TaskState.Completed: {
-                  DataBase.CompleteTask(dialogNPC.GetCurrentTaskType(), dialogNPC.GetCurrentTaskId());
+                  Database.CompleteTask(dialogNPC.GetCurrentTaskType(), dialogNPC.GetCurrentTaskId());
                   dialogNPC.dialogueIndex++;
                   break;
                 }
             }
           }
-          DataBase.SetNPCDialogueIndexById(dialogNPC.npcId, dialogNPC.dialogueIndex);
+          Database.SetNPCDialogueIndexById(dialogNPC.npcId, dialogNPC.dialogueIndex);
           dialogNPC = null;
         }
       } else if (data.category == StringMap.DIALOG) {
@@ -192,11 +192,11 @@ public class DialogControl : MonoBehaviour {
       if (data_.role != StringMap.ME) {
         data_.roleId = (int)jsonObject[StringMap.ROLE_ID].n;
       }
-      data_.text = string.Format(jsonObject[StringMap.TEXT].str, DataBase.Nickname);
+      data_.text = string.Format(jsonObject[StringMap.TEXT].str, Database.Nickname);
     } else if (data_.category == StringMap.TASK) {
       data_.taskId = (int)jsonObject[StringMap.TASK_ID].n;
       data_.taskType = (TaskType)jsonObject[StringMap.TASK_TYPE].n;
-      data_.taskContent = DataBase.GetTask(data_.taskType, data_.taskId).title;
+      data_.taskContent = Database.GetTask(data_.taskType, data_.taskId).title;
       data_.text = string.Format(StringMap.ACCEPT_TASK, data_.taskContent);
     }
     return data_;
@@ -205,8 +205,8 @@ public class DialogControl : MonoBehaviour {
   //更新对话内容
   private async void UpdateDialog() {
     if (data.role == StringMap.ME) {    //玩家说话
-      int id = DataBase.CurrentPersonalityId;
-      JSONObject JsonObject = DataBase.GetPersonalityInfoByIndex(id);
+      int id = Database.CurrentPersonalityId;
+      JSONObject JsonObject = Database.GetPersonalityInfoByIndex(id);
       string fileName = JsonObject[StringMap.ILL_FILE_NAMES].list[data.illustrationIndex].str;
       Sprite sprite = await Addressables.LoadAssetAsync<Sprite>(fileName).Task;
       roleR.sprite = sprite;
@@ -216,7 +216,7 @@ public class DialogControl : MonoBehaviour {
       roleR.gameObject.SetActive(true);
     } else {  //npc说话
       JSONObject JsonObject;
-      JsonObject = DataBase.GetNPCInfoByIndex(dialogNPC.npcId);
+      JsonObject = Database.GetNPCInfoByIndex(dialogNPC.npcId);
       string fileName = JsonObject[StringMap.ILL_FILE_NAMES].list[data.illustrationIndex].str;
       Sprite sprite = await Addressables.LoadAssetAsync<Sprite>(fileName).Task;
       roleL.sprite = sprite;
@@ -243,8 +243,8 @@ public class DialogControl : MonoBehaviour {
   //获取用户昵称
   private string GetUserName() {
     try {
-      if (DataBase.Nickname == null) return StringMap.ME;
-      else return DataBase.Nickname;
+      if (Database.Nickname == null) return StringMap.ME;
+      else return Database.Nickname;
     } catch {
       return StringMap.ME;
     }

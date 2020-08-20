@@ -193,7 +193,7 @@ public class MonsterController : MonoBehaviour
         TaskCenter.UpdateTaskState(RequirementType.MonsterKill.ToString(), monsterProperty.index, 1);
         if (monsterProperty.GetKillExp() > 0)
         {
-            DataBase.AddExp(monsterProperty.GetKillExp());
+            Database.AddExp(monsterProperty.GetKillExp());
         }
         foreach (FallenProp fallenProp in fallenProps)
         {

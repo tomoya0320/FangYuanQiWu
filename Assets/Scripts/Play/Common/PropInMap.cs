@@ -21,7 +21,7 @@ public class PropInMap : MonoBehaviour
 
     private async void Start()
     {
-        propInfo = DataBase.GetPropInfoById(propId);
+        propInfo = Database.GetPropInfoById(propId);
         propIcon = await Addressables.LoadAssetAsync<Sprite>(propInfo["iconFileName"].str).Task;
         playerAnim = isOpenAnim ? GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>() : null;
         nameGameObejct.GetComponent<Canvas>().worldCamera = Camera.main;
@@ -38,7 +38,7 @@ public class PropInMap : MonoBehaviour
 
         MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
         string.Format("获得道具:{0}*{1}", propInfo["name"].str, propNum), propIcon, 0.4f, 0.8f));
-        DataBase.AddPropById(propId, propNum);
+        Database.AddPropById(propId, propNum);
 
         if (reappearTime > 0)
         {

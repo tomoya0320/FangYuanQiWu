@@ -35,13 +35,13 @@ public class PropInKit : MonoBehaviour
     public async void Init(Prop ownedPropData)
     {
         this.ownedPropData = ownedPropData;
-        propInfo = DataBase.GetPropInfoById(ownedPropData.id);
+        propInfo = Database.GetPropInfoById(ownedPropData.id);
         propIcon.sprite = await Addressables.LoadAssetAsync<Sprite>(propInfo["iconFileName"].str).Task;
         UpdatePropInfo();
     }
     public void UseProp()
     {
-        if (DataBase.ConsumePropById(-1, ownedPropData.id, 1))
+        if (Database.ConsumePropById(-1, ownedPropData.id, 1))
         {
             BuffManager buffManager = PlayerController.GetComp<BuffManager>();
             PlayerProperty playerProperty = PlayerController.GetComp<PlayerProperty>();
@@ -52,13 +52,13 @@ public class PropInKit : MonoBehaviour
             }
             if (propInfo.HasField("energyRecovery"))
             {
-                DataBase.SetEnergyVariation((int)propInfo["energyRecovery"].n);
+                Database.SetEnergyVariation((int)propInfo["energyRecovery"].n);
             }
             if (propInfo.HasField("buffs"))
             {
                 foreach (JSONObject json in propInfo["buffs"].list)
                 {
-                    buffManager.AddBuff(DataBase.GetBuffByIndex((int)json["id"].n));
+                    buffManager.AddBuff(Database.GetBuffByIndex((int)json["id"].n));
                 }
             }
             if (ownedPropData.num > 0 && propInfo.HasField("coolTime"))

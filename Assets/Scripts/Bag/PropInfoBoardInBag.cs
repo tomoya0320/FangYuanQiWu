@@ -16,7 +16,7 @@ public class PropInfoBoardInBag : PropOperate {
     }
     gameObject.SetActive(true);
 
-    selectedPropInfo = DataBase.GetPropInfoById(selectedProp.ownedPropData.id);
+    selectedPropInfo = Database.GetPropInfoById(selectedProp.ownedPropData.id);
     propNum.text = "*" + selectedProp.ownedPropData.num;
     propName.text = selectedPropInfo[StringMap.NAME].str;
     price.text = selectedPropInfo[StringMap.PRICE].n.ToString();
@@ -42,7 +42,7 @@ public class PropInfoBoardInBag : PropOperate {
   }
   private void Transfer(int num) {
     if (num > 0) {
-      DataBase.TransferProp(selectedProp.ownedPropData.id, num, PropInBag.propPos, PropInBag.toPos);
+      Database.TransferProp(selectedProp.ownedPropData.id, num, PropInBag.propPos, PropInBag.toPos);
     }
   }
 }

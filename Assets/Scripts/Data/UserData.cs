@@ -57,7 +57,7 @@ public class UserData {
     tasks = new List<List<Task>>();
     for (int i = 0; i < Enum.GetValues(typeof(TaskType)).Length; i++) {
       List<Task> temp = new List<Task>();
-      foreach (JSONObject json in DataBase.DefaultTaskInfos[i].list) {
+      foreach (JSONObject json in Database.DefaultTaskInfos[i].list) {
         temp.Add(JsonUtility.FromJson<Task>(json.ToString()));
       }
       tasks.Add(temp);
@@ -84,11 +84,11 @@ public class UserData {
     }
 
     npcDialogueProcesses = new Dictionary<int, int>();
-    for (int i = 0; i < DataBase.NPCNum; i++) {
+    for (int i = 0; i < Database.NPCNum; i++) {
       npcDialogueProcesses.Add(i, 0);
     }
     //初始角色
-    Personality defaultPlayer = DataBase.GetDefaultPersonalityByIndex(0);
+    Personality defaultPlayer = Database.GetDefaultPersonalityByIndex(0);
     unlockedPersonalities.Add(defaultPlayer.id);
     ownedPersonalities.Add(defaultPlayer);
     currentPlayerId = defaultPlayer.id;
@@ -96,7 +96,7 @@ public class UserData {
     unlockedMainMaps.Add(0);
     ownedMainMaps.Add(new MainMap(0));
     //初始主线信件
-    string[] letterContents = DataBase.GetMainStoryLetterContentsById(0);
+    string[] letterContents = Database.GetMainStoryLetterContentsById(0);
     unreadMainStoryLetters.Add(new Letter(letterContents[0], letterContents[1], letterContents[2]));
   }
 }

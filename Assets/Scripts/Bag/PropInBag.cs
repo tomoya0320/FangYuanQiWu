@@ -18,9 +18,9 @@ public class PropInBag : MonoBehaviour {
   }
   public async void UpdateInfo() {
     if (ItemClassification.instance == null) {
-      ownedPropData = DataBase.GetOwnedPropByIndex(transform.GetSiblingIndex(), propPos);
+      ownedPropData = Database.GetOwnedPropByIndex(transform.GetSiblingIndex(), propPos);
     } else {
-      ownedPropData = DataBase.GetOwnedPropByIndex(transform.GetSiblingIndex(),
+      ownedPropData = Database.GetOwnedPropByIndex(transform.GetSiblingIndex(),
                       ItemClassification.instance.classTags, propPos);
     }
 
@@ -30,7 +30,7 @@ public class PropInBag : MonoBehaviour {
 
       icon.gameObject.SetActive(true);
       icon.sprite = await Addressables.LoadAssetAsync<Sprite>
-      (DataBase.GetPropInfoById(ownedPropData.id)[StringMap.ICON_FILE_NAME].str).Task;
+      (Database.GetPropInfoById(ownedPropData.id)[StringMap.ICON_FILE_NAME].str).Task;
     } else {
       icon.gameObject.SetActive(false);
       icon.sprite = null;

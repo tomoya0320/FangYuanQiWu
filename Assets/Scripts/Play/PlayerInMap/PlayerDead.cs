@@ -29,8 +29,8 @@ public class PlayerDead : MonoBehaviour
     public void Show()
     {
         ownedPropList.Clear();
-        ownedPropList.AddRange(DataBase.GetOwnedPropListByClassTag(0));
-        ownedPropList.AddRange(DataBase.GetOwnedPropListByClassTag(2));
+        ownedPropList.AddRange(Database.GetOwnedPropListByClassTag(0));
+        ownedPropList.AddRange(Database.GetOwnedPropListByClassTag(2));
 
         foreach (GameObject temp in propInSettlementList)
         {
@@ -58,7 +58,7 @@ public class PlayerDead : MonoBehaviour
                 {
                     consumeNum = ownedPropList[index].num;
                 }
-                DataBase.ConsumePropById(0, ownedPropList[index].id, consumeNum);
+                Database.ConsumePropById(0, ownedPropList[index].id, consumeNum);
                 GameObject temp = Instantiate(propInSettlement, content);
                 temp.GetComponent<PropInSettlement>().Init(ownedPropList[index].id, consumeNum);
                 propInSettlementList.Add(temp);

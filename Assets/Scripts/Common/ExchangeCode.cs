@@ -29,15 +29,15 @@ public class ExchangeCode : MonoBehaviour {
       GameObject temp = Instantiate(settlement, transform.parent);
       temp.GetComponent<Settlement>().Init(porpList);
 
-      DataBase.AddPropById(2, 1000);
-      DataBase.AddPropById(3, 20);
-      DataBase.AddPropById(4, 10);
-      DataBase.AddPropById(8, 10);
-      DataBase.AddPropById(9, 20);
-      DataBase.AddPropById(10, 10);
+      Database.AddPropById(2, 1000);
+      Database.AddPropById(3, 20);
+      Database.AddPropById(4, 10);
+      Database.AddPropById(8, 10);
+      Database.AddPropById(9, 20);
+      Database.AddPropById(10, 10);
 
-      DataBase.AddPersonalityById(1);
-      DataBase.AddPersonalityById(2);
+      Database.AddPersonalityById(1);
+      Database.AddPersonalityById(2);
 
       openOrCloseUIWithAnim.Close();
     }

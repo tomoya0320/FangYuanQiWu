@@ -10,12 +10,12 @@ public class PropInSettlement : MonoBehaviour {
     num.text = prop.num.ToString();
 
     icon.sprite = await Addressables.LoadAssetAsync<Sprite>
-    (DataBase.GetPropInfoById(prop.id)[StringMap.ICON_FILE_NAME].str).Task;
+    (Database.GetPropInfoById(prop.id)[StringMap.ICON_FILE_NAME].str).Task;
   }
   public async void Init(int propId, int propNum) {
     num.text = propNum.ToString();
 
     icon.sprite = await Addressables.LoadAssetAsync<Sprite>
-    (DataBase.GetPropInfoById(propId)[StringMap.ICON_FILE_NAME].str).Task;
+    (Database.GetPropInfoById(propId)[StringMap.ICON_FILE_NAME].str).Task;
   }
 }

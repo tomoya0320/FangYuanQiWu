@@ -23,7 +23,7 @@ public class PropOperate : MonoBehaviour {
   }
   public virtual void UpdateInfo() {
     if (selectedProp && selectedProp.ownedPropData != null) {
-      selectedPropInfo = DataBase.GetPropInfoById(selectedProp.ownedPropData.id);
+      selectedPropInfo = Database.GetPropInfoById(selectedProp.ownedPropData.id);
       useButton.interactable = CanUse();
       discardButton.interactable = true;
     } else {
@@ -59,10 +59,10 @@ public class PropOperate : MonoBehaviour {
     return selectedPropInfo[StringMap.CLASS].n == 0 || selectedPropInfo[StringMap.CLASS].n == 1;
   }
   protected void ConsumeProp(JSONObject propInfo, int num, int flag) {
-    if (num > 0 && DataBase.ConsumePropById(flag, (int)propInfo[StringMap.ID].n, num)) {
+    if (num > 0 && Database.ConsumePropById(flag, (int)propInfo[StringMap.ID].n, num)) {
       if (flag == 1) {
         int price = (int)propInfo[StringMap.PRICE].n;
-        DataBase.AddPropById(-1, price * num);
+        Database.AddPropById(-1, price * num);
       } else if (flag == -1) {
         switch ((int)propInfo[StringMap.CLASS].n) {
           case 0: {
@@ -73,11 +73,11 @@ public class PropOperate : MonoBehaviour {
                 playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() + (int)propInfo[StringMap.HP_RECOVERY].n * num);
               }
               if (propInfo.HasField(StringMap.ENERGY_RECOVERY)) {
-                DataBase.SetEnergyVariation((int)propInfo[StringMap.ENERGY_RECOVERY].n * num);
+                Database.SetEnergyVariation((int)propInfo[StringMap.ENERGY_RECOVERY].n * num);
               }
               if (propInfo.HasField(StringMap.BUFFS)) {
                 foreach (JSONObject json in propInfo[StringMap.BUFFS].list) {
-                  buffManager.AddBuff(DataBase.GetBuffByIndex((int)json[StringMap.ID].n));
+                  buffManager.AddBuff(Database.GetBuffByIndex((int)json[StringMap.ID].n));
                 }
               }
               break;
@@ -86,12 +86,12 @@ public class PropOperate : MonoBehaviour {
               //宝箱的使用
               List<Prop> acquiredPropList = new List<Prop>();
               if (propInfo[StringMap.FIXED_CONTENTS].HasField(StringMap.EXP)) {
-                DataBase.AddExp(num * (int)propInfo[StringMap.FIXED_CONTENTS][StringMap.EXP].n);
+                Database.AddExp(num * (int)propInfo[StringMap.FIXED_CONTENTS][StringMap.EXP].n);
               }
               if (propInfo[StringMap.FIXED_CONTENTS].HasField(StringMap.PROPS)) {
                 foreach (JSONObject temp in propInfo[StringMap.FIXED_CONTENTS][StringMap.PROPS].list) {
                   acquiredPropList.Add(new Prop((int)temp[StringMap.ID].n, (int)temp[StringMap.NUM].n * num));
-                  DataBase.AddPropById((int)temp[StringMap.ID].n, (int)temp[StringMap.NUM].n * num);
+                  Database.AddPropById((int)temp[StringMap.ID].n, (int)temp[StringMap.NUM].n * num);
                 }
               }
               if (propInfo[StringMap.RANDOM_CONTENTS].HasField(StringMap.PROPS)) {
@@ -111,7 +111,7 @@ public class PropOperate : MonoBehaviour {
                   }
                   if (prop.num > 0) {
                     acquiredPropList.Add(prop);
-                    DataBase.AddPropById(prop.id, prop.num);
+                    Database.AddPropById(prop.id, prop.num);
                   }
                 }
               }

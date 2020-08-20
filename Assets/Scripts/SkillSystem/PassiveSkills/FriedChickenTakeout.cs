@@ -1,31 +1,25 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FriedChickenTakeout : MonoBehaviour
-{
-    public PlayerProperty playerProperty;
-    public float coolTime;
-    private bool isCooled;
-    public float threshold;
-    public float hpRecovery;
+public class FriedChickenTakeout : MonoBehaviour {
+  public PlayerProperty playerProperty;
+  public float coolTime;
+  private bool isCooled;
+  public float threshold;
+  public float hpRecovery;
 
-    private void Start()
-    {
-        isCooled = true;
+  private void Start() {
+    isCooled = true;
+  }
+  private void Update() {
+    if (playerProperty.GetCurrentHP() / playerProperty.GetMaxHP() < threshold && isCooled) {
+      isCooled = false;
+      StartCoroutine(CoolSkill());
+      playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() * (1.0f + hpRecovery));
     }
-    private void Update()
-    {
-        if (playerProperty.GetCurrentHP() / playerProperty.GetMaxHP() < threshold && isCooled)
-        {
-            isCooled = false; 
-            StartCoroutine(CoolSkill());
-            playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() * (1.0f + hpRecovery));
-        }
-    }
-    private IEnumerator CoolSkill()
-    {
-        yield return new WaitForSeconds(coolTime);
-        isCooled = true;
-    }
+  }
+  private IEnumerator CoolSkill() {
+    yield return new WaitForSeconds(coolTime);
+    isCooled = true;
+  }
 }

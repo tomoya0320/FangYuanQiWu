@@ -25,8 +25,8 @@ public class PersonalityInfoShow : MonoBehaviour {
   private async void Start() {
     upstarPropPrefab = await Addressables.LoadAssetAsync<GameObject>(StringMap.UP_STAR_PROP).Task;
     EventCenter.AddListener(Wzb.EventType.UpdatePersonalityInfo, UpdatePersonalityInfo);
-    ownedPersonalities = DataBase.GetOwnedPersonalities();
-    currentIndex = ownedPersonalities.FindIndex(personality => personality.id == DataBase.CurrentPersonalityId);
+    ownedPersonalities = Database.GetOwnedPersonalities();
+    currentIndex = ownedPersonalities.FindIndex(personality => personality.id == Database.CurrentPersonalityId);
     upstarProps = new List<GameObject>();
     UpdatePersonalityInfo();
   }
@@ -36,9 +36,9 @@ public class PersonalityInfoShow : MonoBehaviour {
   public async void UpdatePersonalityInfo() {
     leftButton.SetActive(currentIndex != 0);
     rightButton.SetActive(currentIndex != ownedPersonalities.Count - 1);
-    switchButton.interactable = DataBase.CurrentPersonality != ownedPersonalities[currentIndex];
+    switchButton.interactable = Database.CurrentPersonality != ownedPersonalities[currentIndex];
 
-    personalityInfo = DataBase.GetPersonalityInfoByIndex(ownedPersonalities[currentIndex].id);
+    personalityInfo = Database.GetPersonalityInfoByIndex(ownedPersonalities[currentIndex].id);
     for (int i = 0; i < starImgs.Length; i++) {
       starImgs[i].sprite = starSprites[i < ownedPersonalities[currentIndex].rarity ? 1 : 0];
     }
@@ -49,7 +49,7 @@ public class PersonalityInfoShow : MonoBehaviour {
     if (ownedPersonalities[currentIndex].rarity < 5) {
       foreach (JSONObject json in personalityInfo[StringMap.UP_STAR_PROPS].list) {
         GameObject temp = Instantiate(upstarPropPrefab, upstarPropContent);
-        int propNum = DataBase.GetPropNumById((int)json[StringMap.ID].n);
+        int propNum = Database.GetPropNumById((int)json[StringMap.ID].n);
         temp.GetComponent<UpStarProp>().Init((int)json[StringMap.ID].n, propNum, (int)json[StringMap.NUM].n);
         upstarProps.Add(temp);
       }
@@ -74,7 +74,7 @@ public class PersonalityInfoShow : MonoBehaviour {
   }
   public void SetCurrentPersonality() {
     switchButton.interactable = false;
-    DataBase.SetCurrentPersonalityById(ownedPersonalities[currentIndex].id);
+    Database.SetCurrentPersonalityById(ownedPersonalities[currentIndex].id);
   }
   public void UpStar() {
     if (ownedPersonalities[currentIndex].rarity == 5) {
@@ -87,9 +87,9 @@ public class PersonalityInfoShow : MonoBehaviour {
         }
       }
       foreach (JSONObject json in personalityInfo[StringMap.UP_STAR_PROPS].list) {
-        DataBase.ConsumePropById(-1, (int)json[StringMap.ID].n, (int)json[StringMap.NUM].n);
+        Database.ConsumePropById(-1, (int)json[StringMap.ID].n, (int)json[StringMap.NUM].n);
       }
-      DataBase.UpPersonalityStar(ownedPersonalities[currentIndex]);
+      Database.UpPersonalityStar(ownedPersonalities[currentIndex]);
       UpdatePersonalityInfo();
       MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, StringMap.UP_STAR_SUCCESS));
     }

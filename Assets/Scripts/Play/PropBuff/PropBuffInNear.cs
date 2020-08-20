@@ -9,7 +9,7 @@ public class PropBuffInNear : MonoBehaviour
 
     private void Start()
     {
-        buff = DataBase.GetBuffByIndex(buffId);
+        buff = Database.GetBuffByIndex(buffId);
     }
 
     private void OnTriggerEnter(Collider other)

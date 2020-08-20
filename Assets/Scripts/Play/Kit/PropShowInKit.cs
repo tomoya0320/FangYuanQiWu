@@ -16,7 +16,7 @@ public class PropShowInKit : MonoBehaviour
      
         EventCenter.AddListener<Prop>(Wzb.EventType.AddPropToKit, AddPropToKit);
         EventCenter.AddListener<GameObject>(Wzb.EventType.RemovePropFromKit, RemovePropFromKit);
-        foreach (Prop ownedProp in DataBase.GetOwnedPropListByClassTag(0))
+        foreach (Prop ownedProp in Database.GetOwnedPropListByClassTag(0))
         {
             GameObject temp = Instantiate(propInKit, propContent);
             temp.GetComponent<PropInKit>().Init(ownedProp);
@@ -43,7 +43,7 @@ public class PropShowInKit : MonoBehaviour
     }
     public void UpdateContentLength()
     {
-        List<Prop> ownedProps = DataBase.GetOwnedPropListByClassTag(0);
+        List<Prop> ownedProps = Database.GetOwnedPropListByClassTag(0);
         int row = (ownedProps.Count / 2) + (ownedProps.Count % 2);
         propContent.sizeDelta = new Vector2(propContent.sizeDelta.x, length * row);
     }

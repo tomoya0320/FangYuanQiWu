@@ -2,6 +2,9 @@
   public const string EMPTY = "";
   public const string NONE = "无";
   public const string ICON_FILE_NAME = "iconFileName";
+  public const string HEAD_ICON_FILE_NAME = "headIconFileName";
+  public const string ACTIVITY_ICON_FILE_NAME = "work_ico_jingyan";
+  public const string FLAT_ICON_FILE_NAME = "flatIconFileName";
   public const string DESCRIPTION = "description";
   public const string SELECT_TITLE = "选中称号";
   public const string UNSELECT_TITLE = "摘下称号";
@@ -45,6 +48,7 @@
   public const string SOME_YEAR_BEFORE = "{0}年前";
   public const string GAME_DATA_FILE = "GameData.bin";
   public const string MONSTERS = "monsters";
+  public const string PERSONALITY = "personality";
   public const string PERSONALITIES = "personalities";
   public const string TITLE = "title";
   public const string TITLES = "titles";
@@ -68,13 +72,44 @@
   public const string ME = "我";
   public const string CHAT = "chat";
   public const string CHAT_TRIGGER = "chatTrigger";
+  public const string ACCEPT = "接    受";
+  public const string ACCEPTED = "已接受";
   public const string ACCEPT_TASK = "接受任务：[{0}]";
+  public const string TASK_COMPLETED = "任务：{0} 已完成！";
+  public const string COMPLETED = "已完成";
+  public const string CLICK_GET = "点击领取";
   public const string DIALOG = "dialog";
   public const string CATEGORY = "category";
   public const string ILL_INDEX = "illustrationIndex";
   public const string ILL_FILE_NAMES = "illustrationFileNames";
   public const string ROLE = "role";
   public const string ROLE_ID = "roleId";
+  public const string MAP = "Map";
+  public const string AP = "AP";
+  public const string LEVEL = "level";
+  public const string MONSTER_LEVEL = "monsterLevel";
+  public const string HB_ICON_FILE_NAME = "handbookIconFileName";
+  public const string HB_HUB_BOTTOM = "handbook_hud_wupindikuang";
+  public const string L2D_PREF_NAME = "live2dPrefabName";
+  public const string PL_PREF_NAME = "playerPrefabName";
+  public const string PROCESSTEXT_PREF_NAME = "processTextPrefab";
+  public const string REWARD_PREF_NAME = "rewardPrefab";
+  public const string MAIL_IN_LIST = "mailinlist";
+  public const string TASK_IN_LIST = "taskinlist";
+  public const string SIDETASK_IN_LIST = "sidetaskinlist";
+  public const string MESSAGE = "message";
+  public const string LOADING = "Loading";
+  public const string START = "Start";
+  public const string AP_NOT_ENOUGH = "体力不足！";
+  public const string QUALITY = "quality";
+  public const string PRELOAD = "Preload";
+  public const string ASSETS_DOWNLOADING = "下载资源中...{0}%(总大小:{1}MB)";
+  public const string TASKTRACK_IN_MAP = "tasktrackinmap";
+  public const string ACCOUNT = "账号ID";
+  public const string DRESS_NUM = "装扮总数";
+  public const string ACHIVEMENT_NUM = "成就总数";
+  public const string MAP_NUM = "解锁地图";
+  public const string PERSONALITY_NUM = "人格总数";
 
   public static string CBTypeToString(CBType cbType) {
     switch (cbType) {

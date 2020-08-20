@@ -14,7 +14,7 @@ public class MonsterProperty : MonoBehaviour,IProperty
     }
     public void InitProperty()
     {
-        monsterProperty = DataBase.GetDefaultMonsterByIndex(index);
+        monsterProperty = Database.GetDefaultMonsterByIndex(index);
     }
     private void Update()
     {

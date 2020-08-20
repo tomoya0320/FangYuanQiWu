@@ -28,11 +28,11 @@ public class UpStarProp : MonoBehaviour
         mask.SetActive(propNum < needNum);
         num.color = propNum < needNum ? Color.red : Color.white;
         icon.sprite = await Addressables.LoadAssetAsync<Sprite>
-        (DataBase.GetPropInfoById(propId)[StringMap.ICON_FILE_NAME].str).Task;
+        (Database.GetPropInfoById(propId)[StringMap.ICON_FILE_NAME].str).Task;
     }
     public void UpdateNum()
     {
-        int propNum = DataBase.GetPropNumById(propId);
+        int propNum = Database.GetPropNumById(propId);
         num.text = propNum + "/" + needNum;
         mask.SetActive(propNum < needNum);
         num.color = propNum < needNum ? Color.red : Color.white;

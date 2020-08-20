@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Wzb;
 
-public class DataBase {
+public class Database {
   //不同稀有度称号的颜色
   private readonly static Color[] titleColors ={
     new Color(0.5764706f,0.7333333f,0.7725491f),

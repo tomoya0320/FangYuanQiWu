@@ -36,7 +36,7 @@ public class PlayerStateManager : MonoBehaviour
             startTime = Time.fixedTime;
             requirementId = int.Parse(sceneName.Split('_')[1]);
             TaskCenter.UpdateTaskState(RequirementType.EnterMap.ToString(), requirementId, 1);
-            DataBase.SaveUserData();
+            Database.SaveUserData();
         }
 
         animStateArray = Enum.GetValues(typeof(AnimState));
@@ -56,7 +56,7 @@ public class PlayerStateManager : MonoBehaviour
                 currentLiveTime++;
                 TaskCenter.UpdateTaskState(RequirementType.SurvivalTimeInMap.ToString(), requirementId, 1);
                 startTime = Time.fixedTime;
-                DataBase.SaveUserData();
+                Database.SaveUserData();
             }
         }
 

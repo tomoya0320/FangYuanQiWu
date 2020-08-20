@@ -49,7 +49,7 @@ public class PlayerInfoShowInMap : MonoBehaviour
         currentShowHPEffectRate = hpEffectImg.sizeDelta.x / maxHpLength;
         UpdateEffect(currentHPRate, currentShowHPRate, currentShowHPEffectRate, hpImg, hpEffectImg, maxHpLength,hpText, PlayerController.GetComp<PlayerProperty>().GetMaxHP());
         //更新精力条效果
-        energyInfo = DataBase.EnergyInfo.Split('/');
+        energyInfo = Database.EnergyInfo.Split('/');
         currentEnergyRate = float.Parse(energyInfo[0]) / float.Parse(energyInfo[1]);
         currentShowEnergyRate = energyImg.sizeDelta.x / maxEnergyLength;
         currentShowEnergyEffectRate = energyEffectImg.sizeDelta.x / maxEnergyLength;
@@ -61,14 +61,14 @@ public class PlayerInfoShowInMap : MonoBehaviour
     }
     public async void UpdateUserInfo()
     {
-        lvText.text = DataBase.Level.ToString();
-        float needEXP = Utils.CalNeededExp(DataBase.Level);
-        expText.text = DataBase.UserExp + "/" + needEXP;
-        expImg.sizeDelta = new Vector2(maxExpLength * (DataBase.UserExp / needEXP), expImg.sizeDelta.y);
+        lvText.text = Database.Level.ToString();
+        float needEXP = Utils.CalNeededExp(Database.Level);
+        expText.text = Database.UserExp + "/" + needEXP;
+        expImg.sizeDelta = new Vector2(maxExpLength * (Database.UserExp / needEXP), expImg.sizeDelta.y);
 
-        nickname.text = DataBase.Nickname;
+        nickname.text = Database.Nickname;
         headIcon.sprite = await Addressables.LoadAssetAsync<Sprite>
-        (DataBase.GetPersonalityInfoByIndex(DataBase.CurrentPersonalityId)["headIconFileName"].str).Task;
+        (Database.GetPersonalityInfoByIndex(Database.CurrentPersonalityId)["headIconFileName"].str).Task;
     }
     private void InitHPAndEnergyImg()
     {
@@ -76,7 +76,7 @@ public class PlayerInfoShowInMap : MonoBehaviour
         hpImg.sizeDelta = new Vector2(maxHpLength * (PlayerController.GetComp<PlayerProperty>().GetCurrentHP() / PlayerController.GetComp<PlayerProperty>().GetMaxHP()), hpImg.sizeDelta.y);
         hpEffectImg.sizeDelta = hpImg.sizeDelta;
 
-        string[] energyInfo = DataBase.EnergyInfo.Split('/'); 
+        string[] energyInfo = Database.EnergyInfo.Split('/'); 
         energyText.text = energyInfo[0] + "/" + energyInfo[1];
         energyImg.sizeDelta = new Vector2(maxEnergyLength * (float.Parse(energyInfo[0]) / float.Parse(energyInfo[1])), energyImg.sizeDelta.y);
         energyEffectImg.sizeDelta = energyImg.sizeDelta;

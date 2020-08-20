@@ -16,7 +16,7 @@ public class SideTaskTrigger : MonoBehaviour
     private void Start()
     {
         highlight.SetFloat("_Outline", 0);
-        task = DataBase.GetTask(TaskType.MainStoryTask, 3);
+        task = Database.GetTask(TaskType.MainStoryTask, 3);
     }
     private void OnTriggerEnter(Collider other)
     {
