@@ -503,7 +503,7 @@ public class Database {
     if (!IsUnlockedTitleById(id)) {
       userData.unlockedTitles.Add(id);
       MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
-      StringMap.GET_ACHIVEMENT + ":" + titleInfos[id][StringMap.NAME].str));
+      string.Format(StringMap.GET_ACHIVEMENT, titleInfos[id][StringMap.NAME].str)));
       EventCenter.Broadcast(Wzb.EventType.UpdateTitleInfo);
       SaveUserData();
     }
@@ -524,7 +524,7 @@ public class Database {
 
     //这个提示之后再换了
     MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade,
-    "获得人格：" + GetPersonalityInfoByIndex(id)["name"].str));
+    string.Format(StringMap.GET_PERSONALITY, GetPersonalityInfoByIndex(id)[StringMap.NAME].str)));
 
     TaskCenter.UpdateTaskState(RequirementType.PersonalityNum.ToString(), 0, 1);
     SaveUserData();

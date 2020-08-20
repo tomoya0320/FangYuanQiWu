@@ -5,6 +5,7 @@
   public const string HEAD_ICON_FILE_NAME = "headIconFileName";
   public const string ACTIVITY_ICON_FILE_NAME = "work_ico_jingyan";
   public const string FLAT_ICON_FILE_NAME = "flatIconFileName";
+  public const string SM_FILE_NAME = "smallMapFileName";
   public const string DESCRIPTION = "description";
   public const string SELECT_TITLE = "选中称号";
   public const string UNSELECT_TITLE = "摘下称号";
@@ -41,11 +42,13 @@
   public const string EXCHANGE_CODE = "1053271651";
   public const string TOTAL_PRICE = "总价";
   public const string PROP_IN_SETTLEMENT = "propinsettlement";
+  #region datetime
   public const string TODAY = "今天";
   public const string SOME_DAY_BEFORE = "{0}天前";
   public const string SOME_WEEK_BEFORE = "{0}周前";
   public const string SOME_MONTH_BEFORE = "{0}月前";
   public const string SOME_YEAR_BEFORE = "{0}年前";
+  #endregion
   public const string GAME_DATA_FILE = "GameData.bin";
   public const string MONSTERS = "monsters";
   public const string PERSONALITY = "personality";
@@ -66,7 +69,9 @@
   public const string SIGNATURE = "signature";
   public const string GET_EXP = "获得经验值{0}";
   public const string LEVEL_UP_TO = "等级提升至Lv{0}";
-  public const string GET_ACHIVEMENT = "获得成就";
+  public const string GET_ACHIVEMENT = "获得成就{0}";
+  public const string GET_PROP = "获得道具{0}*{1}";
+  public const string GET_PERSONALITY = "获得人格{0}";
   public const string REPEATED_PROP = "repeatedProp";
   public const string GET = "获得";
   public const string ME = "我";
@@ -74,8 +79,8 @@
   public const string CHAT_TRIGGER = "chatTrigger";
   public const string ACCEPT = "接    受";
   public const string ACCEPTED = "已接受";
-  public const string ACCEPT_TASK = "接受任务：[{0}]";
-  public const string TASK_COMPLETED = "任务：{0} 已完成！";
+  public const string ACCEPT_TASK = "接受任务[{0}]";
+  public const string TASK_COMPLETED = "任务[{0}]已完成！";
   public const string COMPLETED = "已完成";
   public const string CLICK_GET = "点击领取";
   public const string DIALOG = "dialog";
@@ -96,6 +101,7 @@
   public const string REWARD_PREF_NAME = "rewardPrefab";
   public const string MAIL_IN_LIST = "mailinlist";
   public const string TASK_IN_LIST = "taskinlist";
+  public const string PROP_IN_KIT = "propinkit";
   public const string SIDETASK_IN_LIST = "sidetaskinlist";
   public const string MESSAGE = "message";
   public const string LOADING = "Loading";
@@ -110,6 +116,30 @@
   public const string ACHIVEMENT_NUM = "成就总数";
   public const string MAP_NUM = "解锁地图";
   public const string PERSONALITY_NUM = "人格总数";
+  public const string SHORT_BUFF_INFO = "shortbuffinfo";
+  public const string DETAIL_BUFF_INFO = "detailbuffinfo";
+  public const string GRAY_FACTOR = "_GrayFactor";
+  public const string PLAYER = "Player";
+  public const string INV_PL = "InvinciblePlayer";
+  public const string OUTLINE = "_Outline";
+  public const string LOOK = "查看";
+  public const string INDICATOR = "路牌";
+  public const string COOL_TIME = "coolTime";
+  public const string YOU_ARE_STUNNED = "你已昏迷";
+  public const string YOU_ARE_STUNNED_AND_LOSE_PROPS = "你已昏迷，失去了以下物品";
+  public const string NEED_PROP = "需要道具";
+  #region animator
+  public const string PICK = "pick";
+  public const string DAMAGE = "damage";
+  public const string DEAD = "dead";
+  public const string ATTACK = "attack";
+  public const string RUN = "run";
+  public const string DASH = "dash";
+  public const string JUMP = "jump";
+  public const string IS_GROUNDED = "isGrounded";
+  public const string DROP_SPEED = "dropSpeed";
+  public const string OPEN = "open";
+  #endregion
 
   public static string CBTypeToString(CBType cbType) {
     switch (cbType) {
