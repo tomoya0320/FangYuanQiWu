@@ -22,7 +22,7 @@ public class MonsterController : MonoBehaviour {
   [Header("一些组件")]
   public CharacterController cc;
   public Animator anim;
-  public MonsterProperty monsterProperty;
+  public Property monsterProperty;
   [Header("掉落的道具")]
   public FallenProp[] fallenProps;
   [Header("怪物死亡后的刷新时间")]
@@ -70,7 +70,7 @@ public class MonsterController : MonoBehaviour {
       }
       return;
     }
-    if (PlayerController.GetComp<PlayerProperty>().GetCurrentHP() <= 0) {
+    if (PlayerController.GetComp<Property>().GetCurrentHP() <= 0) {
       anim.SetBool(StringMap.RUN, false);
       return;
     }
@@ -78,7 +78,7 @@ public class MonsterController : MonoBehaviour {
   }
   private AnimState GetPlayerState(Animator animator) {
     foreach (AnimState state in animStateArray) {
-      if (animator.GetCurrentAnimatorStateInfo(0).IsName(state.ToString())) {
+      if (animator.GetCurrentAnimatorStateInfo(0).IsName(StringMap.AnimStateToString(state))) {
         return state;
       }
     }

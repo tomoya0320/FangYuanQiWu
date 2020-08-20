@@ -25,7 +25,7 @@ public class UserData {
   public List<Prop> ownedPropsInBag;
   public List<Prop> ownedPropsInWarehouse;
   public List<MainMap> ownedMainMaps;
-  public List<Personality> ownedPersonalities;
+  public List<PropertyValue> ownedPersonalities;
   //解锁情况
   public HashSet<int> unlockedProps;
   public HashSet<int> unlockedTitles;
@@ -66,7 +66,7 @@ public class UserData {
     ownedPropsInBag = new List<Prop>();
     ownedPropsInWarehouse = new List<Prop>();
     ownedMainMaps = new List<MainMap>();
-    ownedPersonalities = new List<Personality>();
+    ownedPersonalities = new List<PropertyValue>();
 
     unlockedNPCs = new HashSet<int>();
     unlockedProps = new HashSet<int>();
@@ -88,7 +88,7 @@ public class UserData {
       npcDialogueProcesses.Add(i, 0);
     }
     //初始角色
-    Personality defaultPlayer = Database.GetDefaultPersonalityByIndex(0);
+    PropertyValue defaultPlayer = Database.GetDefaultPersonalityByIndex(0);
     unlockedPersonalities.Add(defaultPlayer.id);
     ownedPersonalities.Add(defaultPlayer);
     currentPlayerId = defaultPlayer.id;
@@ -123,42 +123,9 @@ public class MainMap {
     degreeOfExploration = 0;
   }
 }
-[Serializable]
-public class Personality : BasicProperty, ICloneable {
-  public int rarity;
-  public bool jumpable;
-  public float jumpSpeed;
-  public float dashSpeedRate;
-  public bool dashable;
-  public float currentJumpSpeed;
-  public float gravity;
-  public int illustration2Index;
 
-  public Personality() {
-    dashSpeedRate = 3.0f;
-    gravity = 0.3f;
-    jumpable = true;
-    dashable = true;
-  }
-
-  public object Clone() {
-    return MemberwiseClone();
-  }
-}
 [Serializable]
-public class Monster : BasicProperty, ICloneable {
-  public float attackDist;
-  public float followDist;
-  public float attackDelta;
-  public float maxMoveDist;
-  public int killExp;
-
-  public object Clone() {
-    return MemberwiseClone();
-  }
-}
-[Serializable]
-public class BasicProperty {
+public class PropertyValue : ICloneable {
   public int id;
   public string name;
   public float currentHP;
@@ -174,7 +141,26 @@ public class BasicProperty {
   public bool attackable;
   public AnimState animState;
 
-  public BasicProperty() {
+  #region monster use
+  public float attackDist;
+  public float followDist;
+  public float attackDelta;
+  public float maxMoveDist;
+  public int killExp;
+  #endregion
+
+  #region player use
+  public int rarity;
+  public bool jumpable;
+  public float jumpSpeed;
+  public float dashSpeedRate;
+  public bool dashable;
+  public float currentJumpSpeed;
+  public float gravity;
+  public int illustration2Index;
+  #endregion
+
+  public PropertyValue() {
     animSpeed = 1.5f;
     steeringSpeed = 12.0f;
     attackMode = -1;
@@ -182,5 +168,14 @@ public class BasicProperty {
     attackable = true;
     interruptable = true;
     animState = AnimState.Idle;
+
+    dashSpeedRate = 3.0f;
+    gravity = 0.3f;
+    jumpable = true;
+    dashable = true;
+  }
+
+  public object Clone() {
+    return MemberwiseClone();
   }
 }

@@ -137,11 +137,11 @@ GameObject:
   - component: {fileID: 901121574378872706}
   - component: {fileID: 901121574378872709}
   - component: {fileID: 901121574378872732}
-  - component: {fileID: 901121574378872733}
   - component: {fileID: 901121574378872708}
   - component: {fileID: 901121574378872711}
   - component: {fileID: 901121574378872735}
   - component: {fileID: 4479624645004161741}
+  - component: {fileID: 4782674785041452885}
   m_Layer: 0
   m_Name: player_0
   m_TagString: Player
@@ -301,19 +301,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &901121574378872733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901121574378872707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6796c7115e40dc2468b78f935b39a50e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buffManager: {fileID: 901121574378872735}
 --- !u!114 &901121574378872708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,9 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cc: {fileID: 901121574378872709}
-  playerProperty: {fileID: 901121574378872733}
+  playerProperty: {fileID: 4782674785041452885}
   anim: {fileID: 901121574378872706}
-  playerDead: {fileID: 0}
 --- !u!114 &901121574378872711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +341,7 @@ MonoBehaviour:
   - {fileID: 6756244571182319193}
   anim: {fileID: 901121574378872706}
   cc: {fileID: 901121574378872709}
-  playerProperty: {fileID: 901121574378872733}
+  playerProperty: {fileID: 4782674785041452885}
   audioSource: {fileID: 901121574378872732}
   lookAtAndFollow: {fileID: 3125504682560239400}
 --- !u!114 &901121574378872735
@@ -384,10 +370,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddb028cc27c09f4987d40c73c551e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerProperty: {fileID: 901121574378872733}
+  playerProperty: {fileID: 4782674785041452885}
   coolTime: 60
   threshold: 0.3
   hpRecovery: 0.1
+--- !u!114 &4782674785041452885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901121574378872707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5baad93ef571d574c81c2dd75406c021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  sideType: 1
+  buffManager: {fileID: 901121574378872735}
 --- !u!1 &1170034433387135284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1403,7 @@ GameObject:
   - component: {fileID: 7432384740948837848}
   - component: {fileID: 6668772066338211903}
   - component: {fileID: 6668772066338211896}
-  - component: {fileID: 6668772066338211897}
+  - component: {fileID: 3355607729395402293}
   m_Layer: 0
   m_Name: Bone007
   m_TagString: Untagged
@@ -1453,7 +1454,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &6668772066338211897
+--- !u!114 &3355607729395402293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1462,11 +1463,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6668772066338211902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d96edce11fd5594da6aa091dc6c64e8, type: 3}
+  m_Script: {fileID: 11500000, guid: b1269b72c65076d4f87930cba59ee00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 0}
-  playerProperty: {fileID: 901121574378872733}
+  _hitEffect: {fileID: 0}
+  _ownerProperty: {fileID: 4782674785041452885}
+  _target: 2
 --- !u!1 &6700227619955363407
 GameObject:
   m_ObjectHideFlags: 0

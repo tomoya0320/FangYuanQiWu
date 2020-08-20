@@ -9,22 +9,29 @@ public class PlayerController : MonoBehaviour {
   public AnimatorOverrideController[] aoc_dashs;
   [Tooltip("攻击动画")]
   public AnimatorOverrideController[] aoc_atks;
+
   [Header("闪避冷却")]
-  public Image dashCoolImg;
   public float dashCoolTime = 2.0f;
   private bool dashCooled = true;
   private int dashDir = -1;
+  public Image dashCoolImg { set; get; }
+
   [Header("攻击判定位置")]
   public GameObject[] atkColliderObjects;
+
   [Header("武器")]
   public GameObject[] weaponObjects;
+
   [Header("一些组件")]
   public Animator anim;
   public CharacterController cc;
-  public PlayerProperty playerProperty;
+  public Property playerProperty;
   public AudioSource audioSource;
+  public PlayerDead playerDead { set; get; }
+
   [Header("相机跟随/朝向位置")]
   public Transform lookAtAndFollow;
+
   //一些移动操作用到的变量
   private Vector3 moveVector;
   private Vector3 moveDir;
@@ -130,11 +137,9 @@ public class PlayerController : MonoBehaviour {
     }
   }
   private void SetSkillColliderState(int mode, bool state) {
-    Transform[] allChild = atkColliderObjects[mode].GetComponentsInChildren<Transform>();
-    foreach (Transform child in allChild) {
-      foreach (Collider collider in child.GetComponents<Collider>()) {
-        collider.enabled = state;
-      }
+    Collider[] colliders = atkColliderObjects[mode].GetComponentsInChildren<Collider>();
+    foreach (Collider collider in colliders) {
+      collider.enabled = state;
     }
   }
   public void BreakSkill() {
@@ -146,6 +151,9 @@ public class PlayerController : MonoBehaviour {
   }
   public void PlayDeadSound() {
 
+  }
+  private void EventOnDead() {
+    playerDead.Show();
   }
   public static T GetComp<T>() where T : Object {
     if (player == null) {

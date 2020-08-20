@@ -13,9 +13,8 @@ public enum AnimState {
 
 public class PlayerStateManager : MonoBehaviour {
   public CharacterController cc;
-  public PlayerProperty playerProperty;
+  public Property playerProperty;
   public Animator anim;
-  public PlayerDead playerDead;
   private AnimState animState;
   private Array animStateArray;
   private int requirementId;
@@ -23,7 +22,6 @@ public class PlayerStateManager : MonoBehaviour {
   private string sceneName;
   private float currentJumpSpeed;
 
-  public static bool deadTrigger;
   public static int currentLiveTime;
 
   private void Start() {
@@ -36,7 +34,6 @@ public class PlayerStateManager : MonoBehaviour {
     }
 
     animStateArray = Enum.GetValues(typeof(AnimState));
-    deadTrigger = false;
   }
   private void OnDestroy() {
     currentLiveTime = 0;
@@ -75,16 +72,10 @@ public class PlayerStateManager : MonoBehaviour {
     playerProperty.SetMovable(CanMove(animState));
     //能否攻击的判断
     playerProperty.SetAttackable(CanAttack(animState));
-    //死亡判断
-    if (playerProperty.GetCurrentHP() <= 0 && !deadTrigger) {
-      deadTrigger = true;
-      playerDead.Show();
-      anim.SetTrigger(StringMap.DEAD);
-    }
   }
   private AnimState GetPlayerState(Animator animator) {
     foreach (AnimState state in animStateArray) {
-      if (animator.GetCurrentAnimatorStateInfo(0).IsName(state.ToString())) {
+      if (animator.GetCurrentAnimatorStateInfo(0).IsName(StringMap.AnimStateToString(state))) {
         return state;
       }
     }

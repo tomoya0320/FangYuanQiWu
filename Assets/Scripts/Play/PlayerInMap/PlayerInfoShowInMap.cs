@@ -40,10 +40,10 @@ public class PlayerInfoShowInMap : MonoBehaviour {
   }
   private void Update() {
     //更新血条效果
-    currentHPRate = PlayerController.GetComp<PlayerProperty>().GetCurrentHP() / PlayerController.GetComp<PlayerProperty>().GetMaxHP();
+    currentHPRate = PlayerController.GetComp<Property>().GetCurrentHP() / PlayerController.GetComp<Property>().GetMaxHP();
     currentShowHPRate = hpImg.sizeDelta.x / maxHpLength;
     currentShowHPEffectRate = hpEffectImg.sizeDelta.x / maxHpLength;
-    UpdateEffect(currentHPRate, currentShowHPRate, currentShowHPEffectRate, hpImg, hpEffectImg, maxHpLength, hpText, PlayerController.GetComp<PlayerProperty>().GetMaxHP());
+    UpdateEffect(currentHPRate, currentShowHPRate, currentShowHPEffectRate, hpImg, hpEffectImg, maxHpLength, hpText, PlayerController.GetComp<Property>().GetMaxHP());
     //更新精力条效果
     energyInfo = Database.EnergyInfo.Split('/');
     currentEnergyRate = float.Parse(energyInfo[0]) / float.Parse(energyInfo[1]);
@@ -65,9 +65,9 @@ public class PlayerInfoShowInMap : MonoBehaviour {
     (Database.GetPersonalityInfoByIndex(Database.CurrentPersonalityId)[StringMap.HEAD_ICON_FILE_NAME].str).Task;
   }
   private void InitHPAndEnergyImg() {
-    hpText.text = PlayerController.GetComp<PlayerProperty>().GetCurrentHP() + "/" + PlayerController.GetComp<PlayerProperty>().GetMaxHP();
-    hpImg.sizeDelta = new Vector2(maxHpLength * (PlayerController.GetComp<PlayerProperty>().
-    GetCurrentHP() / PlayerController.GetComp<PlayerProperty>().GetMaxHP()), hpImg.sizeDelta.y);
+    hpText.text = PlayerController.GetComp<Property>().GetCurrentHP() + "/" + PlayerController.GetComp<Property>().GetMaxHP();
+    hpImg.sizeDelta = new Vector2(maxHpLength * (PlayerController.GetComp<Property>().
+    GetCurrentHP() / PlayerController.GetComp<Property>().GetMaxHP()), hpImg.sizeDelta.y);
     hpEffectImg.sizeDelta = hpImg.sizeDelta;
 
     string[] energyInfo = Database.EnergyInfo.Split('/');

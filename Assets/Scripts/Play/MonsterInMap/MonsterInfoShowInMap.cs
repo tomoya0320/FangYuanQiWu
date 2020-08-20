@@ -8,7 +8,7 @@ public class MonsterInfoShowInMap : MonoBehaviour {
   public RectTransform hpEffectImg;
   private float maxHpLength;
   [Header("怪物属性")]
-  public MonsterProperty monsterProperty;
+  public Property monsterProperty;
   private float currentHPRate;
   private float currentShowHPRate;
   private float currentShowHPEffectRate;

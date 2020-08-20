@@ -160,4 +160,24 @@
         }
     }
   }
+  public static string SideTypeToString(SideType sideType) {
+    switch (sideType) {
+      case SideType.All: {
+          return "All";
+        }
+      case SideType.Monster: {
+          return "Monster";
+        }
+      case SideType.Player: {
+          return "Player";
+        }
+      case SideType.None: {
+          return "None";
+        }
+    }
+    return "";
+  }
+  public static string AnimStateToString(AnimState animState) {
+    return animState.ToString();
+  }
 }

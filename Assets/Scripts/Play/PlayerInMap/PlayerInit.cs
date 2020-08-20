@@ -22,7 +22,7 @@ public class PlayerInit : MonoBehaviour {
   }
   private void Init() {
     player = Instantiate(playerPrefab);
-    player.GetComponent<PlayerStateManager>().playerDead = playerDead;
+    player.GetComponent<PlayerController>().playerDead = playerDead;
     player.GetComponent<PlayerController>().dashCoolImg = dashCoolImg;
     player.GetComponent<BuffManager>().shortBuffInfoContent = shortBuffInfoContent;
     player.GetComponent<BuffManager>().detailBuffInfoContent = detailBuffInfoContent;

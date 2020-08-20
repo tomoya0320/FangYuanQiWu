@@ -142,12 +142,12 @@ public class Database {
     }
     return JsonUtility.FromJson<Buff>(buffInfos[index].ToString());
   }
-  public static Monster GetDefaultMonsterByIndex(int index) {
-    Monster monster = JsonUtility.FromJson<Monster>(monsterInfos[index].ToString());
+  public static PropertyValue GetDefaultMonsterByIndex(int index) {
+    PropertyValue monster = JsonUtility.FromJson<PropertyValue>(monsterInfos[index].ToString());
     return monster;
   }
-  public static Personality GetDefaultPersonalityByIndex(int index) {
-    Personality player = JsonUtility.FromJson<Personality>(personalityInfos[index].ToString());
+  public static PropertyValue GetDefaultPersonalityByIndex(int index) {
+    PropertyValue player = JsonUtility.FromJson<PropertyValue>(personalityInfos[index].ToString());
     return player;
   }
   public static JSONObject GetPropInfoById(int id) {
@@ -250,16 +250,16 @@ public class Database {
     return propList.FindAll(prop => (int)GetPropInfoById(prop.id)[StringMap.CLASS].n == classTag);
   }
   /**************************************/
-  public static Personality GetOwnedPersonalityByIndex(int index) {
+  public static PropertyValue GetOwnedPersonalityByIndex(int index) {
     if (index >= userData.ownedPersonalities.Count) {
       return null;
     }
     return userData.ownedPersonalities[index];
   }
-  public static Personality GetOwnedPersonalityById(int id) {
+  public static PropertyValue GetOwnedPersonalityById(int id) {
     return userData.ownedPersonalities.Find(p => p.id == id);
   }
-  public static List<Personality> GetOwnedPersonalities() {
+  public static List<PropertyValue> GetOwnedPersonalities() {
     return userData.ownedPersonalities;
   }
   public static MainMap GetOwnedMainMapByIndex(int index) {
@@ -368,7 +368,7 @@ public class Database {
     }
     return 0;
   }
-  public static Personality CurrentPersonality => userData.ownedPersonalities[CurrentPersonalityId];
+  public static PropertyValue CurrentPersonality => userData.ownedPersonalities[CurrentPersonalityId];
   public static List<Mail> GetMailListByType(MailType mailType) {
     return userData.mails[(int)mailType];
   }
@@ -596,7 +596,7 @@ public class Database {
     }
     return false;
   }
-  public static void UpPersonalityStar(Personality personality) {
+  public static void UpPersonalityStar(PropertyValue personality) {
     //暂时测试用
     if (personality.rarity < 5) {
       personality.rarity++;

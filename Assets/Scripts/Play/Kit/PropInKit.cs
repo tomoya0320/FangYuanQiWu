@@ -33,7 +33,7 @@ public class PropInKit : MonoBehaviour {
   public void UseProp() {
     if (Database.ConsumePropById(-1, ownedPropData.id, 1)) {
       BuffManager buffManager = PlayerController.GetComp<BuffManager>();
-      PlayerProperty playerProperty = PlayerController.GetComp<PlayerProperty>();
+      Property playerProperty = PlayerController.GetComp<Property>();
       //产生效果
       if (propInfo.HasField(StringMap.HP_RECOVERY)) {
         playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() + (int)propInfo[StringMap.HP_RECOVERY].n);

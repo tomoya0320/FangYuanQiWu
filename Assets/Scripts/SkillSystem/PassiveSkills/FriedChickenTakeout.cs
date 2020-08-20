@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public class FriedChickenTakeout : MonoBehaviour {
-  public PlayerProperty playerProperty;
+  public Property playerProperty;
   public float coolTime;
   private bool isCooled;
   public float threshold;
@@ -15,7 +15,8 @@ public class FriedChickenTakeout : MonoBehaviour {
     if (playerProperty.GetCurrentHP() / playerProperty.GetMaxHP() < threshold && isCooled) {
       isCooled = false;
       StartCoroutine(CoolSkill());
-      playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() * (1.0f + hpRecovery));
+      playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() +
+      playerProperty.GetMaxHP() * (1.0f + hpRecovery));
     }
   }
   private IEnumerator CoolSkill() {

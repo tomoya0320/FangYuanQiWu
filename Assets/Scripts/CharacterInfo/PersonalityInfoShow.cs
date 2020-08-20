@@ -18,7 +18,7 @@ public class PersonalityInfoShow : MonoBehaviour {
 
   private int currentIndex;
   private JSONObject personalityInfo;
-  private List<Personality> ownedPersonalities;
+  private List<PropertyValue> ownedPersonalities;
   private List<GameObject> upstarProps;
   private GameObject upstarPropPrefab;
 

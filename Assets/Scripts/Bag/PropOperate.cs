@@ -67,7 +67,7 @@ public class PropOperate : MonoBehaviour {
         switch ((int)propInfo[StringMap.CLASS].n) {
           case 0: {
               BuffManager buffManager = PlayerController.GetComp<BuffManager>();
-              PlayerProperty playerProperty = PlayerController.GetComp<PlayerProperty>();
+              Property playerProperty = PlayerController.GetComp<Property>();
               //产生效果
               if (propInfo.HasField(StringMap.HP_RECOVERY)) {
                 playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() + (int)propInfo[StringMap.HP_RECOVERY].n * num);
