@@ -34,13 +34,22 @@ public class BuffManager : MonoBehaviour {
   private GameObject shortBuffInfo;
   private GameObject detailBuffInfo;
   private List<Buff> buffs;
+  private List<BuffInfoShow> buffInfoShows;
 
   private async void Start() {
     buffs = new List<Buff>();
+    buffInfoShows = new List<BuffInfoShow>();
     shortBuffInfo = await Addressables.LoadAssetAsync<GameObject>(StringMap.SHORT_BUFF_INFO).Task;
     detailBuffInfo = await Addressables.LoadAssetAsync<GameObject>(StringMap.DETAIL_BUFF_INFO).Task;
   }
-
+  private void Update() {
+    for (int i = buffInfoShows.Count - 1; i >= 0; i--) {
+      if (!buffInfoShows[i].OnUpdate()) {
+        buffs.Remove(buffInfoShows[i].buff);
+        buffInfoShows.RemoveAt(i);
+      }
+    }
+  }
   public void AddBuff(Buff buff) {
     int index = buffs.FindIndex(b => {
       return b.id == buff.id;
@@ -58,10 +67,13 @@ public class BuffManager : MonoBehaviour {
     if (detailBuffInfoContent) {
       GameObject tempDetail = Instantiate(detailBuffInfo, detailBuffInfoContent);
       tempShort.GetComponent<BuffInfoShow>().Init
-      (buff, tempDetail.GetComponent<DetailBuffInfo>(), detailBuffInfoContent, buffs);
+      (buff, tempDetail.GetComponent<DetailBuffInfo>(), detailBuffInfoContent, AddBuffInfoShow);
     } else {
-      tempShort.GetComponent<BuffInfoShow>().Init(buff, buffs);
+      tempShort.GetComponent<BuffInfoShow>().Init(buff, AddBuffInfoShow);
     }
+  }
+  private void AddBuffInfoShow(BuffInfoShow buffInfoShow) {
+    buffInfoShows.Add(buffInfoShow);
   }
   public float GetBuffValueByClassTag(int classTag) {
     float value = 1.0f;

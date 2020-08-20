@@ -1,5 +1,5 @@
 ﻿using DG.Tweening;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
@@ -7,24 +7,21 @@ using UnityEngine.UI;
 public class BuffInfoShow : MonoBehaviour {
   public Image buffIcon;
   public Image leftTime;
-
   public CanvasGroup canvasGroup;
+
+  public Buff buff;
+  public bool isNoDetail;
+  public DetailBuffInfo detailBuffInfo;
+
   private Tween tween;
-
-  private Buff buff;
-  private List<Buff> buffs;
-  private DetailBuffInfo detailBuffInfo;
   private RectTransform detailBuffContent;
-
   private float length;
   private int minute;
   private int second;
   private float duration;
-  private bool isNoDetail;
 
-  public async void Init(Buff buff, DetailBuffInfo detailBuffInfo, RectTransform detailBuffContent, List<Buff> buffs) {
+  public async void Init(Buff buff, DetailBuffInfo detailBuffInfo, RectTransform detailBuffContent, Action<BuffInfoShow> addBuffInfoShow) {
     this.buff = buff;
-    this.buffs = buffs;
     this.detailBuffInfo = detailBuffInfo;
     this.detailBuffContent = detailBuffContent;
 
@@ -39,26 +36,29 @@ public class BuffInfoShow : MonoBehaviour {
     detailBuffInfo.description.text = buff.description;
     detailBuffInfo.buffIcon.sprite = await Addressables.LoadAssetAsync<Sprite>(buff.iconFileName).Task;
     buffIcon.sprite = detailBuffInfo.buffIcon.sprite;
+
+    addBuffInfoShow(this);
   }
-  public async void Init(Buff buff, List<Buff> buffs) {
+  public async void Init(Buff buff, Action<BuffInfoShow> addBuffInfoShow) {
     isNoDetail = true;
     this.buff = buff;
-    this.buffs = buffs;
     buffIcon.sprite = await Addressables.LoadAssetAsync<Sprite>(buff.iconFileName).Task;
+
+    addBuffInfoShow(this);
   }
-  private void Update() {
+  public bool OnUpdate() {
     //表示持续时间无限
     if (buff.duration < 0) {
-      return;
+      return true;
     }
     duration = Time.time - buff.startTime;
     if (duration > buff.duration) {
-      buffs.Remove(buff);
       if (!isNoDetail) {
         detailBuffContent.sizeDelta -= new Vector2(0, length);
         Destroy(detailBuffInfo.gameObject);
       }
       Destroy(gameObject);
+      return false;
     } else {
       if (buff.duration - duration > 2.0f && buff.duration - duration <= 5.0f) {
         if (tween == null) {
@@ -78,6 +78,7 @@ public class BuffInfoShow : MonoBehaviour {
         second = (int)((buff.duration - duration) % 60.0f);
         detailBuffInfo.leftTime.text = minute.ToString().PadLeft(2, '0') + ":" + second.ToString().PadLeft(2, '0');
       }
+      return true;
     }
   }
 }
