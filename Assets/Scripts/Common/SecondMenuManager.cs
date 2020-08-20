@@ -1,46 +1,39 @@
 ﻿using UnityEngine;
 
-public class SecondMenuManager : MonoBehaviour
-{
-    public bool alphaTest;
-    public GameObject secondMenu;  
-    protected bool isClicked;
-    protected WButton button;
-    // Start is called before the first frame update
-    protected virtual void Start()
-    {
-        isClicked = false;
-        button = GetComponent<WButton>();
-        ChangeAlphaThreshold(alphaTest);
-    }
+[RequireComponent(typeof(WButton))]
+public class SecondMenuManager : MonoBehaviour {
+  public bool alphaTest;
+  public GameObject secondMenu;
+  protected bool isClicked;
+  protected WButton button;
 
-    public virtual void SetClikced()
-    {
-        isClicked = true;
-        button.scaleAnim = false;
-        button.clickSound = false;
+  protected virtual void Start() {
+    isClicked = false;
+    button = GetComponent<WButton>();
+    ChangeAlphaThreshold(alphaTest);
+  }
+
+  public virtual void SetClikced() {
+    isClicked = true;
+    button.scaleAnim = false;
+    button.clickSound = false;
+  }
+  public virtual void LateClickEventDeal() {
+    button.scaleAnim = !isClicked;
+    button.clickSound = !isClicked;
+    button.image.raycastTarget = !isClicked;
+    ChangeAlphaThreshold(alphaTest);
+    secondMenu.SetActive(isClicked);
+    isClicked = false;
+  }
+  private void LateUpdate() {
+    if (Input.GetMouseButtonUp(0)) {
+      LateClickEventDeal();
     }
-    public virtual void LateClickEventDeal()
-    {      
-        button.scaleAnim = !isClicked;
-        button.clickSound = !isClicked;
-        button.image.raycastTarget = !isClicked;
-        ChangeAlphaThreshold(alphaTest);
-        secondMenu.SetActive(isClicked);
-        isClicked = false;
+  }
+  private void ChangeAlphaThreshold(bool alphaTest) {
+    if (alphaTest) {
+      button.image.alphaHitTestMinimumThreshold = isClicked ? 0 : 0.5f;
     }
-    private void LateUpdate()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            LateClickEventDeal();
-        }
-    }
-    private void ChangeAlphaThreshold(bool alphaTest)
-    {
-        if (alphaTest)
-        {
-            button.image.alphaHitTestMinimumThreshold = isClicked ? 0 : 0.5f;
-        }
-    }
+  }
 }

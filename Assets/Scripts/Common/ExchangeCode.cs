@@ -4,29 +4,21 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Wzb;
 
-public class ExchangeCode : MonoBehaviour
-{
-    public OpenOrCloseUIWithAnim openOrCloseUIWithAnim;
-    private GameObject settlement;
+public class ExchangeCode : MonoBehaviour {
+  public OpenOrCloseUIWithAnim openOrCloseUIWithAnim;
+  private GameObject settlement;
 
-    private async void Start()
-    {
-        settlement = await Addressables.LoadAssetAsync<GameObject>("settlement").Task;
-    }
-    public void GetGift(InputField inputField)
-    {
-        if (string.IsNullOrEmpty(inputField.text))
-        {
-            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "请输入兑换码！"));
-        }
-        else if (inputField.text != "1053271651")
-        {
-            MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, "兑换码错误！"));
-        }
-        else
-        {   
-            List<Prop> porpList = new List<Prop>
-            {
+  private async void Start() {
+    settlement = await Addressables.LoadAssetAsync<GameObject>(StringMap.SETTLEMENT).Task;
+  }
+  public void GetGift(InputField inputField) {
+    if (string.IsNullOrEmpty(inputField.text)) {
+      MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, StringMap.INPUT_EXCHANGE_CODE));
+    } else if (inputField.text != StringMap.EXCHANGE_CODE) {
+      MessageCenter.Instance.AddMessage(new Message(MessageStyle.ColorFade, StringMap.EXCHANGE_CODE_ERROR));
+    } else {
+      List<Prop> porpList = new List<Prop>
+      {
                 new Prop(2, 1000),
                 new Prop(3, 20),
                 new Prop(4, 10),
@@ -34,20 +26,20 @@ public class ExchangeCode : MonoBehaviour
                 new Prop(9, 20),
                 new Prop(10, 10)
             };
-            GameObject temp = Instantiate(settlement, transform.parent);
-            temp.GetComponent<Settlement>().Init(porpList);
+      GameObject temp = Instantiate(settlement, transform.parent);
+      temp.GetComponent<Settlement>().Init(porpList);
 
-            DataBase.AddPropById(2, 1000);
-            DataBase.AddPropById(3, 20);
-            DataBase.AddPropById(4, 10);
-            DataBase.AddPropById(8, 10);
-            DataBase.AddPropById(9, 20);
-            DataBase.AddPropById(10, 10);
+      Database.AddPropById(2, 1000);
+      Database.AddPropById(3, 20);
+      Database.AddPropById(4, 10);
+      Database.AddPropById(8, 10);
+      Database.AddPropById(9, 20);
+      Database.AddPropById(10, 10);
 
-            DataBase.AddPersonalityById(1);
-            DataBase.AddPersonalityById(2);
+      Database.AddPersonalityById(1);
+      Database.AddPersonalityById(2);
 
-            openOrCloseUIWithAnim.Close();
-        }
+      openOrCloseUIWithAnim.Close();
     }
+  }
 }

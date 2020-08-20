@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-public class OpenOrCloseUI : MonoBehaviour
-{
-    public GameObject target;
+public class OpenOrCloseUI : MonoBehaviour {
+  public GameObject target;
 
-    public void OnClick()
-    {
-        target.SetActive(!target.activeSelf);
+  public void OnClick() {
+    if (target != null) {
+      target.SetActive(!target.activeSelf);
     }
+  }
 }

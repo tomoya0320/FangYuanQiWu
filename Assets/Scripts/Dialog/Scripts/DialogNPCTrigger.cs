@@ -27,9 +27,9 @@ public class DialogNPCTrigger : MonoBehaviour
     private void Start()
     {
         highlight.SetFloat("_Outline", 0);
-        npcInfo = DataBase.GetNPCInfoByIndex(npcId);
+        npcInfo = Database.GetNPCInfoByIndex(npcId);
         npcDialogueInfo = npcInfo["dialogueList"].list;
-        dialogueIndex = DataBase.GetNPCDialogueIndexById(npcId);
+        dialogueIndex = Database.GetNPCDialogueIndexById(npcId);
         npcName.text = npcInfo["name"].str;
     }
     private void Update()
@@ -117,11 +117,11 @@ public class DialogNPCTrigger : MonoBehaviour
     }
     public TaskState GetCurrentDialogueTaskState()
     {
-        return DataBase.GetTask(GetCurrentTaskType(), GetCurrentTaskId()).state;
+        return Database.GetTask(GetCurrentTaskType(), GetCurrentTaskId()).state;
     }    
     public TaskState GetCurrentRequiredTaskState()
     {
-        return DataBase.GetTask(GetCurrentRequiredTaskType(), GetCurrentRequiredTaskId()).state;
+        return Database.GetTask(GetCurrentRequiredTaskType(), GetCurrentRequiredTaskId()).state;
     }
     public TaskType GetCurrentTaskType()
     {

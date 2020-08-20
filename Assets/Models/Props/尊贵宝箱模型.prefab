@@ -81,6 +81,7 @@ MonoBehaviour:
   propGameObejct: {fileID: 3106027336712329545}
   propName: {fileID: 3249030849731310556}
   nameGameObejct: {fileID: 3249030848792634767}
+  isOpenAnim: 0
 --- !u!1 &3249030848617768230
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +144,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -435,6 +437,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

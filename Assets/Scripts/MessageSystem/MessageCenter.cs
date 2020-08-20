@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -15,7 +14,6 @@ namespace Wzb {
     public float duration;
     public float delay;
     public bool isShowImg;
-
 
     public Message(MessageStyle messageStyle, string description, Sprite img, float duration = 0.5f, float delay = 1.0f) {
       this.messageStyle = messageStyle;
@@ -60,7 +58,7 @@ namespace Wzb {
     public async void ShowMessage() {
       if (messages.Count > 0) {
         int index = (int)messages[0].messageStyle;
-        tempGo = await Addressables.InstantiateAsync("message" + index, transform).Task;
+        tempGo = await Addressables.InstantiateAsync(StringMap.MESSAGE + index, transform).Task;
         MessageShow ms = tempGo.GetComponent<MessageShow>();
         ms.Init(messages[0]);
       } else {
