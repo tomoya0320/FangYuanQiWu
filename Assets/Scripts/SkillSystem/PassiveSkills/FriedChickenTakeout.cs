@@ -15,8 +15,7 @@ public class FriedChickenTakeout : MonoBehaviour {
     if (playerProperty.GetCurrentHP() / playerProperty.GetMaxHP() < threshold && isCooled) {
       isCooled = false;
       StartCoroutine(CoolSkill());
-      playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() +
-      playerProperty.GetMaxHP() * (1.0f + hpRecovery));
+      playerProperty.SetCurrentHP(playerProperty.GetCurrentHP() + playerProperty.GetMaxHP() * hpRecovery);
     }
   }
   private IEnumerator CoolSkill() {
