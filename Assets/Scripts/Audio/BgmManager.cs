@@ -2,8 +2,9 @@
 using UnityEngine;
 
 public class BgmManager : SingletonMono<BgmManager> {
+  public AudioClip audioClip { private set; get; }
+
   private Tween tween;
-  private AudioClip audioClip;
   private float keyValue;
   private float keySwitch;
   private AudioSource audioSource;
@@ -40,6 +41,10 @@ public class BgmManager : SingletonMono<BgmManager> {
       tween = null;
     });
   }
+  /// <summary>
+  /// 这时候BGM并没有真正切换，还需要再调用一次PlayBgm方法
+  /// </summary>
+  /// <param name="clip"></param>
   public void ChangeBgm(AudioClip clip) {
     audioClip = clip;
   }

@@ -14,6 +14,7 @@
   public const string NAME = "name";
   public const string PRICE = "price";
   public const string CLASS = "class";
+  public const string KEY = "key";
   public const string SETTLEMENT = "settlement";
   public const string ID = "id";
   public const string HP_RECOVERY = "hpRecovery";
@@ -56,6 +57,7 @@
   public const string TITLE = "title";
   public const string TITLES = "titles";
   public const string MAPS = "maps";
+  public const string BGMS = "bgms";
   public const string MAIN_STORY_LETTERS = "mainStoryLetters";
   public const string MAIN_STORY_MAILS = "mainStoryMails";
   public const string ACTIVITY_GIFTS = "activityGifts";

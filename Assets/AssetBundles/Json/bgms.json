@@ -1,0 +1,28 @@
+{
+    "bgms": [
+        {
+            "key": "Bgm_0",
+            "name": "团子大家族【钢琴曲】（Cover：Oturans）"
+        },
+        {
+            "key": "Bgm_1",
+            "name": "主界面默认背景音乐"
+        },
+        {
+            "key": "Bgm_2",
+            "name": "神明"
+        },
+        {
+            "key": "Bgm_3",
+            "name": "ミスターフィクサー（异度侵入op）"
+        },
+        {
+            "key": "Bgm_4",
+            "name": "伽蓝经"
+        },
+        {
+            "key": "Bgm_5",
+            "name": "Everyday Life（刀剑神域插曲）"
+        }
+    ]
+}
