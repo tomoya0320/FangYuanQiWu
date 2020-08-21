@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 4991001299706820972}
   - component: {fileID: 4991001299706820963}
   m_Layer: 5
-  m_Name: singleton
+  m_Name: Singleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
