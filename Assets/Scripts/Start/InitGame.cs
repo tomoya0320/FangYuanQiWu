@@ -15,24 +15,20 @@ public class InitGame : MonoBehaviour {
   public Image downloadProcess;
   private AsyncOperationHandle downloadHandle;
   private AsyncOperationHandle<long> checkHandle;
-  private static GameObject instance;
 
   private void Awake() {
-    if (instance == null) {
-      foreach (SettingType settingType in Enum.GetValues(typeof(SettingType))) {
-        if (!PlayerPrefs.HasKey(settingType.ToString() + StringMap.SWITCH)) {
-          PlayerPrefs.SetInt(settingType.ToString() + StringMap.SWITCH, 1);
-        }
-        if (!PlayerPrefs.HasKey(settingType.ToString() + StringMap.VALUE)) {
-          PlayerPrefs.SetInt(settingType.ToString() + StringMap.VALUE, 100);
-        }
+    foreach (SettingType settingType in Enum.GetValues(typeof(SettingType))) {
+      if (!PlayerPrefs.HasKey(settingType.ToString() + StringMap.SWITCH)) {
+        PlayerPrefs.SetInt(settingType.ToString() + StringMap.SWITCH, 1);
       }
-      Screen.sleepTimeout = SleepTimeout.NeverSleep;
-      Application.targetFrameRate = targetFrameRate;
-      instance = Instantiate(singleton);
-      DontDestroyOnLoad(instance);
-      Database.LoadGameData();
+      if (!PlayerPrefs.HasKey(settingType.ToString() + StringMap.VALUE)) {
+        PlayerPrefs.SetInt(settingType.ToString() + StringMap.VALUE, 100);
+      }
     }
+    Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    Application.targetFrameRate = targetFrameRate;
+    Database.LoadGameData();
+    DontDestroyOnLoad(singleton);
   }
   public async void CheckGameAssets() {
     await Addressables.InitializeAsync().Task;
