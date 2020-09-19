@@ -22,8 +22,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
-    m_MainAsset: {fileID: 102900000, guid: 1d1db884f6f2cca40936e3c022295c22, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: 1d1db884f6f2cca40936e3c022295c22, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2760361dbdc28a645b3c3bb660f48655
+    m_Address: videos
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    m_MainAsset: {fileID: 4900000, guid: 2760361dbdc28a645b3c3bb660f48655, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: 2760361dbdc28a645b3c3bb660f48655, type: 3}
   - m_GUID: 29cda3c45d5b474449b21fad13dc7def
     m_Address: titles
     m_ReadOnly: 0
@@ -70,15 +77,15 @@ MonoBehaviour:
     m_SerializedLabels:
     - Json
     - Preload
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 4900000, guid: 72a16b6b2212d854eafef0a45bad3fe8, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: 72a16b6b2212d854eafef0a45bad3fe8, type: 3}
   - m_GUID: 84c228c242823b14eac8119d803e0335
     m_Address: bgms
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
-    m_MainAsset: {fileID: 4900000, guid: 84c228c242823b14eac8119d803e0335, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: 84c228c242823b14eac8119d803e0335, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 8edde51d22df7b44a81074c06928311c
     m_Address: tasks
     m_ReadOnly: 0
@@ -101,16 +108,16 @@ MonoBehaviour:
     m_SerializedLabels:
     - Json
     - Preload
-    m_MainAsset: {fileID: 4900000, guid: 92280b3ad953abc43b05740598c371a5, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: 92280b3ad953abc43b05740598c371a5, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: dbf148b96824395408a14e774b46913d
     m_Address: personalities
     m_ReadOnly: 0
     m_SerializedLabels:
     - Json
     - Preload
-    m_MainAsset: {fileID: 4900000, guid: dbf148b96824395408a14e774b46913d, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: dbf148b96824395408a14e774b46913d, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: fc9a8b1c88e52654196c7bc107cc1649
     m_Address: mainStoryLetters
     m_ReadOnly: 0

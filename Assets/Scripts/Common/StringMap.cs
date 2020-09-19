@@ -58,6 +58,7 @@
   public const string TITLES = "titles";
   public const string MAPS = "maps";
   public const string BGMS = "bgms";
+  public const string VIDEOS = "videos";
   public const string MAIN_STORY_LETTERS = "mainStoryLetters";
   public const string MAIN_STORY_MAILS = "mainStoryMails";
   public const string ACTIVITY_GIFTS = "activityGifts";
